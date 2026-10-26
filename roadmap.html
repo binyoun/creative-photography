@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Creative Photography (VART3670), RMIT Vietnam, Semester 3 2026: 12-week roadmap and assessments.">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Creative Photography Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one course, read top to bottom. Assessments first as a weight bar, then the semester as a strip of week frames. */
+:root {
+  --paper: #f3f5f4; --sheet: #ffffff; --ink: #1a1e20; --muted: #5b6569; --rule: #d6dcdc;
+  --accent: #a8610f; --accent-soft: #f7ead8; --due: #c0352a; --due-soft: #f9e1de; --break: #e9ecea;
+  --f-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #121516; --sheet: #1a1f21; --ink: #e8ecec; --muted: #9aa5a8; --rule: #2e3639;
+  --accent: #e6a456; --accent-soft: #3f2c14; --due: #f0705f; --due-soft: #4a1f1a; --break: #20272a; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #121516; --sheet: #1a1f21; --ink: #e8ecec; --muted: #9aa5a8; --rule: #2e3639;
+  --accent: #e6a456; --accent-soft: #3f2c14; --due: #f0705f; --due-soft: #4a1f1a; --break: #20272a; color-scheme: dark; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 36px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 40px; }
+header { display: grid; gap: 10px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(40px, 8vw, 72px); line-height: .95; margin: 0; color: var(--accent); text-wrap: balance; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 28px; margin: 0; letter-spacing: .02em; }
+.lede { font-size: 18px; max-width: 62ch; margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; }
+.facts span { font-size: 14px; padding: 4px 10px; border-radius: 999px; background: var(--sheet); border: 1px solid var(--rule); }
+section { display: grid; gap: 16px; }
+
+/* weight bar */
+.bar { display: flex; height: 14px; border-radius: 7px; overflow: hidden; gap: 3px; }
+.bar i { display: block; background: var(--accent); }
+.bar i:nth-child(2) { opacity: .75; } .bar i:nth-child(3) { opacity: .5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.card { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.card .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.card .code { font-family: var(--f-mono); font-size: 13px; color: var(--accent); font-weight: 600; }
+.card .pct { font-family: var(--f-display); font-size: 36px; font-weight: 700; line-height: 1; }
+.card h3 { font-size: 18px; margin: 0; line-height: 1.25; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card .when { font-family: var(--f-mono); font-size: 13px; color: var(--due); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* weeks */
+.weeks { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.wk { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.wk .hd { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+.wk .no { font-family: var(--f-mono); font-weight: 600; font-size: 14px; color: var(--accent); }
+.wk .dt { font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.wk h3 { margin: 0; font-size: 17px; line-height: 1.25; }
+.wk ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; display: grid; gap: 2px; }
+.wk .duetag { margin-top: 4px; background: var(--due-soft); border: 1px solid var(--due); border-radius: 5px; padding: 6px 9px; font-size: 13.5px; }
+.wk .duetag b { color: var(--due); font-family: var(--f-mono); font-size: 12px; display: block; }
+.wk.brk { background: repeating-linear-gradient(135deg, var(--break) 0 6px, var(--sheet) 6px 12px); }
+.wk.brk h3 { color: var(--muted); }
+.wk.hl { border-color: var(--accent); box-shadow: inset 0 3px 0 var(--accent); }
+.phase { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+
+.tips { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.tip { border-top: 3px solid var(--accent); padding-top: 10px; display: grid; gap: 4px; }
+.tip b { font-size: 16px; }
+.tip span { color: var(--muted); font-size: 15px; }
+.async { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 22px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+@media (max-width: 640px) { .async { grid-template-columns: 1fr; } }
+.async > div { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.async h3 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 22px; color: var(--accent); }
+.async p { margin: 0; }
+.async a { color: var(--accent); font-weight: 600; }
+.async ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.tpl { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.tpl .card a { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+.tpl .links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.tplnote { margin: 0; color: var(--muted); font-size: 15px; }
+.rule50 { display: flex; align-items: center; gap: 12px; font-family: var(--f-mono); font-size: 13px; }
+.rule50 .track { flex: 1; height: 10px; border-radius: 5px; background: var(--accent-soft); position: relative; overflow: hidden; }
+.rule50 .track i { position: absolute; inset: 0 50% 0 0; background: var(--accent); }
+.wk .att { font-family: var(--f-mono); font-size: 11px; color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 2px 6px; justify-self: start; }
+.foot { font-size: 13px; color: var(--muted); margin: 0; }
+.hub-back { display: inline-block; margin-bottom: 1rem; font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+.hub-back:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="hub-back" href="./">&larr; Course hub</a>
+  <header>
+    <div class="eyebrow">VART3670 · Semester 3, 2026 · Your 12-week roadmap</div>
+    <h1>Creative Photography</h1>
+    <p class="lede">Six weeks of experiments that push photography past the single frame, then six weeks developing your own photographic project from idea to final presentation.</p>
+    <div class="facts"><span>3-hour studio class every week</span><span>About 6 hours of work a week outside class</span><span>Your own camera that shoots RAW</span><span>Studio weeks in Media Studio 1.1.34</span></div>
+  </header>
+  
+  <section>
+    <h2>How you are assessed</h2>
+    <div class="bar" role="img" aria-label="A1 40 percent, A2 40 percent, A3 20 percent"><i style="flex:40" title="A1 40%"></i><i style="flex:40" title="A2 40%"></i><i style="flex:20" title="A3 20%"></i></div>
+    <div class="cards"><div class="card"><div class="top"><span class="code">A1</span><span class="pct">40%</span></div><h3>Visual Journals</h3><p>One PDF with 4 journal entries, one each for Weeks 2, 3, 4 and 5: 4 edited photos and 250 to 500 words per entry, plus behind-the-scenes material.</p><span class="when">Due Fri Dec 4, 22:00</span></div><div class="card"><div class="top"><span class="code">A2</span><span class="pct">40%</span></div><h3>Final Project</h3><p>Your own concept, no brief: 10 to 30 connected images. Get your topic approved by the end of Week 8. Shown in class in Week 12.</p><span class="when">Due Fri Jan 15, 22:00</span></div><div class="card"><div class="top"><span class="code">A3</span><span class="pct">20%</span></div><h3>Final Project Documentation</h3><p>750 to 1000 words on your workflow, challenges and how you solved them, with behind-the-scenes images, setups and moodboards.</p><span class="when">Due Fri Jan 15, 22:00</span></div></div>
+  </section>
+  
+  <section>
+    <h2>Week by week</h2>
+    <div class="weeks"><article class="wk"><div class="hd"><span class="no">Week 1</span><span class="dt">Oct 19</span></div><h3>Introduction</h3><ul><li>Introduce yourself and share a photo</li><li>In-class: self-portrait</li><li>Basic knowledge quiz</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 2</span><span class="dt">Oct 26</span></div><span class="phase">Experiment 1</span><h3>Beyond the Absence of Colours</h3><ul><li>Black and white, white balance</li><li>Robert Frank, the Zone System</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 3</span><span class="dt">Nov 2</span></div><span class="phase">Experiment 2</span><h3>Beyond the Lens</h3><ul><li>Databending and glitch art</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 4</span><span class="dt">Nov 9</span></div><span class="phase">Experiment 3</span><h3>Beyond the Site</h3><ul><li>Creative studio lighting, light painting</li><li>Class in Media Studio 1.1.34</li><li>Early feedback from your lecturer this week</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 5</span><span class="dt">Nov 16</span></div><span class="phase">Experiment 4</span><h3>Beyond Single Frame</h3><ul><li>Multiple exposure and compositing</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 6</span><span class="dt">Nov 23</span></div><span class="phase">Experiment 5</span><h3>Beyond the Medium</h3><ul><li>Class in Media Studio 1.1.34</li></ul></article><article class="wk hl"><div class="hd"><span class="no">Week 7</span><span class="dt">Nov 30</span></div><span class="phase">Final Project, phase 1</span><h3>Find your project</h3><ul><li>Study 3 photographers and 3 photo books</li><li>Choose a topic and a working title</li><li>Shoot, then bring a first edit of 10 to 20 images</li></ul><div class="duetag"><b>DUE Fri Dec 4, 22:00</b>A1 Visual Journals</div></article><article class="wk"><div class="hd"><span class="no">Week 8</span><span class="dt">Dec 7</span></div><span class="phase">Final Project, phase 2</span><h3>Lock your topic</h3><ul><li>Present and discuss your topic</li><li>Topic approved by your lecturer by the end of this week</li><li>Visit Matca (matca.vn)</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 9</span><span class="dt">Dec 14</span></div><span class="phase">Final Project, phase 3</span><h3>Shoot</h3><ul><li>1:1 consultation on your project</li><li>Bring your camera</li></ul></article><article class="wk brk"><div class="hd"><span class="no">Break</span><span class="dt">Dec 21</span></div><h3>Christmas break, no class</h3></article><article class="wk"><div class="hd"><span class="no">Week 10</span><span class="dt">Dec 28</span></div><span class="phase">Final Project, phase 4</span><h3>Shoot</h3><ul><li>1:1 consultation on your project</li><li>Bring your camera</li></ul></article><article class="wk"><div class="hd"><span class="no">Week 11</span><span class="dt">Jan 4</span></div><span class="phase">Final Project</span><h3>Final edit</h3><ul><li>Bring at least 50 printed images of your project</li><li>Edit and sequence the series in class</li></ul></article><article class="wk hl"><div class="hd"><span class="no">Week 12</span><span class="dt">Jan 11</span></div><span class="phase">Final Project</span><h3>Showcase</h3><ul><li>Show your final project in class</li><li>Attendance is expected</li></ul><div class="duetag"><b>DUE Fri Jan 15, 22:00</b>A2 Final Project and A3 Documentation</div></article></div>
+  </section>
+  <section>
+    <h2>Before you start</h2>
+    <div class="tips"><div class="tip"><b>Bring a camera that shoots RAW</b><span>You need manual control of aperture, shutter speed and ISO. RMIT doesn't lend cameras for this course.</span></div><div class="tip"><b>Know the basics already</b><span>This is an advanced course. You should be comfortable with the exposure triangle and Lightroom, for example from Photography 101.</span></div><div class="tip"><b>Write each journal entry that week</b><span>A1 covers the Week 2 to 5 experiments. Write each entry while the work is fresh, not in Week 7.</span></div><div class="tip"><b>No AI on your images</b><span>You may use AI to plan or fix grammar, never to generate, edit or alter images. Reference any AI you use.</span></div><div class="tip"><b>Get permission on campus</b><span>Check the Taking Photos on Campus page before you shoot around RMIT.</span></div><div class="tip"><b>Start your project idea early</b><span>You choose your own final project with no brief. The topic needs approval by the end of Week 8, so start thinking about it now.</span></div></div>
+  </section>
+  <p class="foot">All due times are Vietnam time (ICT). Canvas is the official record: if anything here differs from Canvas, Canvas wins. Feedback on each assignment comes back within two weeks of its due date, in Marks on Canvas.</p>
+</div>
+
+</body>
+</html>

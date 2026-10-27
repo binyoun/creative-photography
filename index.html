@@ -619,8 +619,20 @@
             gap: 0.5rem;
             margin-top: 1.5rem;
         }
+        .outcome-h {
+            font-family: var(--f-display);
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-top: 2.5rem;
+        }
+        .outcome-p { color: var(--muted); max-width: 46rem; margin-top: 0.4rem; }
+        .outcome-list { list-style: none; padding: 0; margin-top: 1.25rem; display: grid; gap: 0.75rem; grid-template-columns: repeat(3, 1fr); }
+        .outcome-list li { border: 1px solid var(--line); background: var(--card); padding: 0.9rem 1rem; }
+        .outcome-list b { display: block; font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
+        .outcome-list span { font-size: 0.95rem; color: var(--muted); }
         @media (max-width: 768px) {
             .work { grid-template-columns: repeat(2, 1fr); }
+            .outcome-list { grid-template-columns: 1fr; }
         }
 </style>
 </head>
@@ -650,7 +662,7 @@
                 <a href="#experiments">Experiments</a>
                 <a href="#project">Final Project</a>
                 <a href="#assignments">Assignments</a>
-                <a href="#work">Past Work</a>
+                <a href="#work">Student Work</a>
                 <a href="#references">References</a>
                 <a href="#rules">Rules</a>
             </nav>
@@ -834,6 +846,65 @@
                 <a class="btn" href="https://binyoun.github.io/reroot/#talks" target="_blank" rel="noopener">Artist talks →</a>
                 <a class="btn" href="https://binyoun.github.io/reroot/workshops/" target="_blank" rel="noopener">Workshop series →</a>
                 <a class="btn" href="https://au.miro.com/app/board/uXjVGQAQNmg=/?share_link_id=845917461627" target="_blank" rel="noopener">Semester 1 2026 class board →</a>
+            </div>
+        </section>
+
+        <section id="outcomes">
+            <span class="label">Out in the world</span>
+            <h2>Student work beyond the classroom</h2>
+            <p class="lede">Final projects from this course keep travelling after rễ-root. Here is where they have been shown so far.</p>
+
+            <h3 class="outcome-h">rễRoute · Pingyao International Photography Festival, China · September 2026</h3>
+            <p class="outcome-p">RMIT Photography from Australia and Vietnam. 31 artists from RMIT Melbourne and RMIT Vietnam, including 8 of our Photography 101, Creative Photography and Digital Media students. Tap a work to read the artist's statement.</p>
+            <div class="work">
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/hao-tran-quoc/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-hao-tran-quoc.jpg" alt="Photograph from The Bond by Hao Tran Quoc" loading="lazy">
+                    <div class="cap"><b>The Bond</b><span>Hao Tran Quoc · Creative Photography</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/nga-le-thi-tuyet/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-nga-le-thi-tuyet.jpg" alt="Photograph from Fallen leaves return to their roots by Nga Le Thi Tuyet" loading="lazy">
+                    <div class="cap"><b>Fallen leaves return to their roots</b><span>Nga Le Thi Tuyet · Creative Photography</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/ton-nguyen/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-ton-nguyen.jpg" alt="Photograph from There Is a Place I Can't Enter by Ton Nguyen" loading="lazy">
+                    <div class="cap"><b>There Is a Place I Can't Enter</b><span>Ton Nguyen · Creative Photography</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/anh-tran-dang-minh/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-anh-tran-dang-minh.jpg" alt="Photograph from I Miss by Anh Tran Dang Minh" loading="lazy">
+                    <div class="cap"><b>I Miss</b><span>Anh Tran Dang Minh · Creative Photography</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/diem-nguyen-vo-hong/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-diem-nguyen-vo-hong.jpg" alt="Photograph from Stitching My Roots by Diem Nguyen Vo Hong" loading="lazy">
+                    <div class="cap"><b>Stitching My Roots</b><span>Diem Nguyen Vo Hong · Photography 101</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/chau-ngo-bao/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-chau-ngo-bao.jpg" alt="Photograph of Sa Pa by Chau Ngo Bao" loading="lazy">
+                    <div class="cap"><b>Untitled series (Sa Pa and Ha Noi)</b><span>Chau Ngo Bao · Photography 101</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/cuc-ca-thi/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-cuc-ca-thi.jpg" alt="Photograph of daily life in Sa Pa by Cuc Ca Thi" loading="lazy">
+                    <div class="cap"><b>Untitled series (Sa Pa)</b><span>Cuc Ca Thi · Photography 101</span></div>
+                </a>
+                <a href="https://sites.rmit.edu.au/photography/2026/08/21/trang-pham-ha-hoang/" target="_blank" rel="noopener">
+                    <img src="image/pingyao-trang-pham-ha-hoang.jpg" alt="Photograph from Ca Dao by Trang Pham Ha Hoang" loading="lazy">
+                    <div class="cap"><b>Ca Dao</b><span>Trang Pham Ha Hoang · Digital Media</span></div>
+                </a>
+            </div>
+            <div class="after-work">
+                <a class="btn primary" href="https://sites.rmit.edu.au/photography/2026-pingyao-international-photography-festival/" target="_blank" rel="noopener">rễRoute exhibition →</a>
+                <a class="btn" href="https://sites.rmit.edu.au/photography/2026-pingyao-international-photography-festival/installation-views/" target="_blank" rel="noopener">Installation views →</a>
+            </div>
+
+            <h3 class="outcome-h">IFFTI 2026 · Lygon Gallery, RMIT Saigon South · April 2026</h3>
+            <p class="outcome-p">Creative Photography final projects selected for the on-campus exhibition at the 28th IFFTI Annual Conference, seen by fashion educators and researchers from around the world during graduation week.</p>
+            <ul class="outcome-list">
+                <li><b>Red Horn</b><span>Tran Quoc Hao · Creative Photography</span></li>
+                <li><b>Liminal Self</b><span>Tran Khiet Nghi (Mir Tran) · Creative Photography</span></li>
+                <li><b>There Is a Place I Can't Enter</b><span>Ton Nguyen · Creative Photography</span></li>
+            </ul>
+            <div class="after-work">
+                <a class="btn" href="https://www.rmit.edu.vn/about-us/schools-and-centres/school-communication-design/iffti-2026" target="_blank" rel="noopener">IFFTI 2026 →</a>
+                <a class="btn" href="https://binyoun.github.io/reroot/#exhibitions" target="_blank" rel="noopener">The works at rễ-root →</a>
             </div>
         </section>
 

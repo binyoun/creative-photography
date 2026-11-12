@@ -85,11 +85,27 @@ section { display: grid; gap: 16px; }
 .foot a { color: var(--accent); text-decoration: none; font-weight: 600; }
 .hub-back { display: inline-block; margin-bottom: 1rem; font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
 .hub-back:hover { text-decoration: underline; }
+
+/* top menu + footer in the hub's dark green (same on every page of the site) */
+.topbar { position: sticky; top: 0; z-index: 20; background: rgba(10, 15, 12, .94); backdrop-filter: blur(10px); border-bottom: 1px solid #1f2b24; }
+.topbar-inner { max-width: 1080px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 18px; }
+.topbar .logo { font-family: "Syne", "Helvetica Neue", Arial, sans-serif; font-weight: 800; font-size: 1.15rem; text-decoration: none; color: #e8efe9; white-space: nowrap; }
+.topbar .logo span { color: #5aad72; }
+.topbar nav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.topbar nav a { text-decoration: none; font-weight: 600; font-size: .92rem; color: #b9c4bc; padding: 6px 11px; border-radius: 999px; white-space: nowrap; }
+.topbar nav a:hover { background: #13201a; color: #fff; }
+@media (max-width: 640px) { .topbar .logo { display: none; } .topbar nav { margin-left: 0; } }
+.site-foot { background: #0a0f0c; color: #8b958e; text-align: center; padding: 2.75rem 16px 3.25rem; font-size: .9rem; line-height: 1.8; border-top: 1px solid #1f2b24; }
+.site-foot .school { color: #9aa39c; letter-spacing: 2px; text-transform: uppercase; font-size: .8rem; }
+.site-foot .university { color: #e8efe9; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+.site-foot .copyright { margin-top: .9rem; font-size: .88rem; }
+.site-foot .disclaimer { max-width: 40rem; margin: 10px auto 0; font-size: .82rem; line-height: 1.5; color: #7f8a82; }
+.site-foot a { color: #7dd99b; text-decoration: none; }
 </style>
 </head>
 <body>
+<div class="topbar"><div class="topbar-inner"><a class="logo" href="./">Creative <span>Photography</span></a><nav aria-label="Creative Photography"><a href="./">Hub</a><a href="./#experiments">Experiments</a><a href="./#project">Final project</a><a href="./#assignments">Assignments</a><a href="https://rmit.instructure.com/courses/174747" target="_blank" rel="noopener">Canvas</a></nav></div></div>
 <div class="wrap">
-  <a class="hub-back" href="./">&larr; Course hub</a>
   <header>
     <div class="eyebrow">VART3670 · Semester 3, 2026 · Your 12-week roadmap</div>
     <h1>Creative Photography</h1>
@@ -112,8 +128,13 @@ section { display: grid; gap: 16px; }
     <div class="tips"><div class="tip"><b>Bring a camera that shoots RAW</b><span>You need manual control of aperture, shutter speed and ISO. RMIT doesn't lend cameras for this course.</span></div><div class="tip"><b>Know the basics already</b><span>This is an advanced course. You should be comfortable with the exposure triangle and Lightroom, for example from Photography 101.</span></div><div class="tip"><b>Write each journal entry that week</b><span>A1 covers the Week 2 to 5 experiments. Write each entry while the work is fresh, not in Week 7.</span></div><div class="tip"><b>No AI on your images</b><span>You may use AI to plan or fix grammar, never to generate, edit or alter images. Reference any AI you use.</span></div><div class="tip"><b>Get permission on campus</b><span>Check the Taking Photos on Campus page before you shoot around RMIT.</span></div><div class="tip"><b>Start your project idea early</b><span>You choose your own final project with no brief. The topic needs approval by the end of Week 8, so start thinking about it now.</span></div></div>
   </section>
   <p class="foot">All due times are Vietnam time (ICT). Canvas is the official record: if anything here differs from Canvas, Canvas wins. Feedback on each assignment comes back within two weeks of its due date, in Marks on Canvas.</p>
-  <p class="foot">© 2026 Bin Youn · <a href="https://binyoun.com" target="_blank" rel="noopener">binyoun.com</a> · <a href="mailto:bin.youn@rmit.edu.vn">bin.youn@rmit.edu.vn</a><br>An independent teaching resource made by Bin Youn for Creative Photography students. This is not an official RMIT University website. Canvas and the course guide are the official record: if anything here differs, Canvas is correct.</p>
 </div>
+<footer class="site-foot">
+  <div class="school">School of Communication &amp; Design</div>
+  <div class="university">RMIT University Vietnam</div>
+  <div class="copyright">© 2026 Bin Youn · <a href="https://binyoun.com" target="_blank" rel="noopener">binyoun.com</a> · <a href="mailto:bin.youn@rmit.edu.vn">bin.youn@rmit.edu.vn</a></div>
+  <p class="disclaimer">An independent teaching resource made by Bin Youn for Creative Photography students. This is not an official RMIT University website. Canvas and the course guide are the official record: if anything here differs, Canvas is correct.</p>
+</footer>
 
 </body>
 </html>

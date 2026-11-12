@@ -51,7 +51,9 @@
             position: relative;
             height: clamp(300px, 48vh, 440px);
             overflow: hidden;
+            background: radial-gradient(ellipse at 50% 40%, #0f1d14 0%, #070b08 70%);
         }
+        .particles { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
         .pixel-background {
             position: absolute;
@@ -59,7 +61,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: crosshair;
         }
 
         .pixel-grid {
@@ -76,7 +77,7 @@
         .pixel {
             width: 12px;
             height: 12px;
-            background: #0a0a0a;
+            background: transparent;
             transition: background-color 0.05s, box-shadow 0.05s;
         }
 
@@ -95,7 +96,7 @@
             align-items: center;
             gap: 0.9rem;
             pointer-events: none;
-            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(7,11,8,0.75) 0%, transparent 100%);
         }
 
         .instructions {
@@ -115,36 +116,25 @@
         }
 
         .nav-btn {
-            background: rgba(0,0,0,0.8);
-            border: 1px solid #333;
-            color: #999;
-            padding: 0.6rem 1.4rem;
+            background: rgba(13, 20, 16, 0.85);
+            border: 1px solid #2c3d32;
+            color: #d5ded7;
+            padding: 0.6rem 1.3rem;
+            border-radius: 999px;
             font-family: var(--f-body);
-            font-size: 0.88rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.95rem;
             text-decoration: none;
             display: inline-block;
             backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            transition: border-color .2s, color .2s, background .2s;
         }
 
-        .nav-btn:hover {
-            border-color: #fff;
-            color: #fff;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        }
+        .nav-btn:hover { border-color: var(--red-light); color: #fff; }
 
-        .nav-btn.primary {
-            border-color: var(--red);
-            color: var(--red);
-        }
+        .nav-btn.primary { background: var(--red); border-color: var(--red); color: #07110a; }
 
-        .nav-btn.primary:hover {
-            background: var(--red);
-            color: #fff;
-            box-shadow: 0 0 30px rgba(90, 173, 114, 0.4);
-        }
+        .nav-btn.primary:hover { background: var(--red-light); border-color: var(--red-light); color: #07110a; }
 
         .scroll-cue {
             color: #8b958e;
@@ -482,41 +472,21 @@
 
         /* Footer */
         footer {
-            border-top: 1px solid var(--line);
             margin-top: 4rem;
-            padding: 2.5rem 16px 3rem;
+            padding: 2.75rem 16px 3.25rem;
             text-align: center;
             color: #8b958e;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             line-height: 1.8;
+            border-top: 1px solid var(--line);
+            background: linear-gradient(to bottom, transparent, rgba(90, 173, 114, 0.06));
         }
-
-        footer .school {
-            color: #9aa39c;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.82rem;
-        }
-
-        footer .university {
-            color: #999;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-top: 0.25rem;
-        }
-
-        footer .copyright {
-            margin-top: 1rem;
-            font-size: 0.82rem;
-        }
-
-        footer a {
-            color: var(--red);
-            text-decoration: none;
-        }
-
-        footer a:hover { color: var(--red-light); }
+        footer .school { color: #9aa39c; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; }
+        footer .university { color: var(--ink); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-top: 0.15rem; }
+        footer .copyright { margin-top: 0.9rem; font-size: 0.88rem; }
+        footer .disclaimer { max-width: 40rem; margin: 10px auto 0; font-size: 0.82rem; line-height: 1.5; color: #7f8a82; }
+        footer a { color: var(--red-light); text-decoration: none; }
+        footer a:hover { color: #fff; }
 
         @media (max-width: 768px) {
             .pixel {
@@ -638,12 +608,12 @@
 </head>
 <body>
     <header class="hero" id="hero">
+        <canvas class="particles" id="particles" aria-hidden="true"></canvas>
         <div class="pixel-background" id="pixelBackground">
             <div class="pixel-grid" id="pixelGrid"></div>
         </div>
 
         <div class="content-overlay">
-            <p class="instructions">Move cursor to illuminate</p>
 
             <nav class="nav-buttons" aria-label="Quick links">
                 <a href="roadmap.html" class="nav-btn primary">Roadmap</a>
@@ -1014,7 +984,7 @@
         <div class="copyright">
             © 2026 Bin Youn · <a href="https://binyoun.com" target="_blank" rel="noopener">binyoun.com</a> · <a href="mailto:bin.youn@rmit.edu.vn">bin.youn@rmit.edu.vn</a>
         </div>
-        <p class="disclaimer" style="max-width:40rem;margin:10px auto 0;font-size:.82rem;line-height:1.5;opacity:.8">An independent teaching resource made by Bin Youn for Creative Photography students. This is not an official RMIT University website. Canvas and the course guide are the official record: if anything here differs, Canvas is correct.</p>
+        <p class="disclaimer">An independent teaching resource made by Bin Youn for Creative Photography students. This is not an official RMIT University website. Canvas and the course guide are the official record: if anything here differs, Canvas is correct.</p>
     </footer>
 
     <script>
@@ -1172,6 +1142,7 @@
         let pixelSize = 12;
         const hero = document.getElementById('hero');
         let heroVisible = true;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         let lastWidth = window.innerWidth;
 
         new IntersectionObserver((entries) => {
@@ -1309,7 +1280,12 @@
                 requestAnimationFrame(updatePixels);
                 return;
             }
-            time += 0.015;
+            // A soft green light drifts across the title on its own (no cursor needed).
+            if (!reduceMotion) {
+                time += 0.015;
+                mouseX = hero.clientWidth * (0.5 + 0.36 * Math.sin(time * 0.9));
+                mouseY = hero.clientHeight * (0.4 + 0.22 * Math.sin(time * 1.7 + 1));
+            }
 
             for (let row = 0; row < pixelElements.length; row++) {
                 for (let col = 0; col < pixelElements[row].length; col++) {
@@ -1360,8 +1336,8 @@
                             pixel.style.boxShadow = `0 0 ${6 * intensity}px rgba(${r}, ${g}, ${b}, ${intensity * 0.5})`;
                         } else {
                             // Very subtle ambient for background
-                            const [ar, ag, ab] = hslToRgb(baseHue, 0.3, 0.03);
-                            pixel.style.backgroundColor = `rgb(${ar}, ${ag}, ${ab})`;
+                            // Empty cells stay see-through so the particles show
+                            pixel.style.backgroundColor = 'transparent';
                             pixel.style.boxShadow = 'none';
                         }
                     }
@@ -1370,33 +1346,6 @@
 
             requestAnimationFrame(updatePixels);
         }
-
-        function setPointer(x, y) {
-            const rect = hero.getBoundingClientRect();
-            mouseX = x - rect.left;
-            mouseY = y - rect.top;
-        }
-
-        document.addEventListener('mousemove', (e) => {
-            setPointer(e.clientX, e.clientY);
-        });
-
-        hero.addEventListener('touchmove', (e) => {
-            if (e.touches.length > 0) {
-                setPointer(e.touches[0].clientX, e.touches[0].clientY);
-            }
-        }, { passive: true });
-
-        hero.addEventListener('touchstart', (e) => {
-            if (e.touches.length > 0) {
-                setPointer(e.touches[0].clientX, e.touches[0].clientY);
-            }
-        }, { passive: true });
-
-        document.addEventListener('mouseleave', () => {
-            mouseX = -1000;
-            mouseY = -1000;
-        });
 
         let resizeTimeout;
         window.addEventListener('resize', () => {
@@ -1414,6 +1363,52 @@
         calculateGrid();
         createPixelGrid();
         updatePixels();
+
+        // ---------- floating pixel particles (rễ-root greens, a few warm fireflies) ----------
+        (() => {
+            const cv = document.getElementById('particles');
+            const ctx = cv.getContext('2d');
+            const COLORS = ['#5aad72', '#7dd99b', '#a8e6b8', '#3f8f5a', '#c9f27a', '#e6d97a'];
+            let W = 0, H = 0, parts = [];
+            function size() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                W = hero.clientWidth; H = hero.clientHeight;
+                cv.width = W * dpr; cv.height = H * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                const n = Math.round(Math.min(80, Math.max(24, (W * H) / 10000)));
+                parts = Array.from({ length: n }, () => spawn(true));
+            }
+            function spawn(anywhere) {
+                const s = Math.max(4, pixelSize * (0.6 + Math.random() * 1.0));
+                return {
+                    x: Math.random() * W, y: anywhere ? Math.random() * H : H + s + Math.random() * 40,
+                    s, vy: 0.1 + Math.random() * 0.3, sway: 6 + Math.random() * 18, phase: Math.random() * Math.PI * 2,
+                    tw: 0.6 + Math.random() * 1.8, c: COLORS[(Math.random() * COLORS.length) | 0], a: 0.3 + Math.random() * 0.45,
+                };
+            }
+            let t = 0;
+            function frame() {
+                if (heroVisible || t === 0) {
+                    t += 0.016;
+                    ctx.clearRect(0, 0, W, H);
+                    for (let i = 0; i < parts.length; i++) {
+                        const p = parts[i];
+                        if (!reduceMotion) { p.y -= p.vy; if (p.y < -p.s - 10) parts[i] = spawn(false); }
+                        const x = p.x + Math.sin(t * 0.6 + p.phase) * p.sway;
+                        const fade = Math.min(1, p.y / (H * 0.25), (H - p.y + 20) / (H * 0.2));
+                        ctx.globalAlpha = Math.max(0, p.a * fade * (0.6 + 0.4 * Math.sin(t * p.tw + p.phase)));
+                        ctx.fillStyle = p.c;
+                        ctx.fillRect(Math.round(x), Math.round(p.y), Math.round(p.s), Math.round(p.s));
+                    }
+                    ctx.globalAlpha = 1;
+                }
+                if (!reduceMotion) requestAnimationFrame(frame);
+            }
+            size(); frame();
+            let rt;
+            window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(size, 200); });
+        })();
+
     </script>
 </body>
 </html>

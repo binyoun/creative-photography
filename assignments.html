@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Creative Photography (VART3670), RMIT Vietnam: how to format and submit A1 Visual Journals, A2 Final Project and A3 Final Project Documentation, page by page.">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Creative Photography Assignment Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Same tokens as roadmap.html so the two sub-pages read as one set. */
+:root {
+  --paper: #f3f5f4; --sheet: #ffffff; --ink: #1a1e20; --muted: #5b6569; --rule: #d6dcdc;
+  --accent: #a8610f; --accent-soft: #f7ead8; --due: #c0352a; --due-soft: #f9e1de;
+  --ph: #dfe4e3; --ph-line: #c9d0cf; --mock: #ffffff; --mock-ink: #1a1e20;
+  --f-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #121516; --sheet: #1a1f21; --ink: #e8ecec; --muted: #9aa5a8; --rule: #2e3639;
+  --accent: #e6a456; --accent-soft: #3f2c14; --due: #f0705f; --due-soft: #4a1f1a;
+  --ph: #2a3134; --ph-line: #364044; --mock: #20262a; --mock-ink: #e8ecec; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #121516; --sheet: #1a1f21; --ink: #e8ecec; --muted: #9aa5a8; --rule: #2e3639;
+  --accent: #e6a456; --accent-soft: #3f2c14; --due: #f0705f; --due-soft: #4a1f1a;
+  --ph: #2a3134; --ph-line: #364044; --mock: #20262a; --mock-ink: #e8ecec; color-scheme: dark; }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 64px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 36px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 56px; }
+header { display: grid; gap: 12px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(40px, 8vw, 72px); line-height: .95; margin: 0; color: var(--accent); text-wrap: balance; }
+h2 { font-family: var(--f-display); font-weight: 600; font-size: 32px; margin: 0; letter-spacing: .02em; line-height: 1.1; }
+h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+.lede { font-size: 18px; max-width: 64ch; margin: 0; }
+p { margin: 0; }
+section { display: grid; gap: 18px; min-width: 0; }
+.sub { color: var(--muted); max-width: 70ch; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--f-mono); font-size: .88em; }
+code { background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+
+/* jump links */
+.jump { display: flex; flex-wrap: wrap; gap: 8px; }
+.jump a { font-size: 14px; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 999px; background: var(--sheet); border: 1px solid var(--rule); color: var(--ink); }
+.jump a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* assignment head */
+.ahead { display: grid; gap: 10px; border-top: 3px solid var(--accent); padding-top: 14px; }
+.ahead .row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; }
+.ahead .code { font-family: var(--f-mono); font-size: 14px; font-weight: 600; color: var(--accent); }
+.ahead .due { font-family: var(--f-mono); font-size: 13px; font-weight: 600; color: var(--due); }
+.ahead .w { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; }
+.facts span { font-size: 14px; padding: 4px 10px; border-radius: 999px; background: var(--sheet); border: 1px solid var(--rule); }
+
+/* will-not-be-marked box */
+.stop { background: var(--due-soft); border: 1px solid var(--due); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
+.stop b { color: var(--due); font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.stop ul { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+
+/* basics */
+.basics { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+.tip { border-top: 3px solid var(--accent); padding-top: 10px; display: grid; gap: 4px; align-content: start; }
+.tip b { font-size: 16px; }
+.tip span { color: var(--muted); font-size: 15px; }
+
+/* page mockups */
+.pages { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 22px 16px; counter-reset: pg; }
+.pg { display: grid; gap: 8px; align-content: start; min-width: 0; margin: 0; container-type: inline-size; }
+.pg figcaption { display: grid; gap: 2px; font-size: 14.5px; }
+.pg figcaption b { font-size: 15px; }
+.pg figcaption .no { font-family: var(--f-mono); color: var(--accent); font-size: 12px; margin-right: 6px; }
+.pg figcaption span { color: var(--muted); }
+.pg.opt figcaption b::after { content: " · optional"; font-weight: 400; color: var(--muted); font-size: 13px; }
+.pg.rep figcaption b::before { content: "\2192"; font-family: var(--f-mono); color: var(--accent); margin-right: 6px; }
+.page { aspect-ratio: 16 / 9; background: var(--mock); color: var(--mock-ink); border: 1px solid var(--rule); border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 6px 14px -8px rgba(0,0,0,.18); padding: 5cqw; display: grid; gap: 2.6cqw; position: relative; overflow: hidden; font-size: 3.4cqw; line-height: 1.25; margin: 0; }
+.page::after { content: attr(data-n); position: absolute; right: 2.6cqw; bottom: 1.8cqw; font-family: var(--f-mono); font-size: 2.6cqw; color: var(--muted); }
+.page .k { font-family: var(--f-mono); font-size: 2.6cqw; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); }
+.page .t { font-family: var(--f-display); font-weight: 700; font-size: 7.5cqw; line-height: .95; }
+.page .t2 { font-family: var(--f-display); font-weight: 600; font-size: 5cqw; line-height: 1; }
+.page .s { font-size: 3cqw; color: var(--muted); }
+.page .cap { font-family: var(--f-mono); font-size: 2.3cqw; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ph { background: var(--ph); background-image: linear-gradient(135deg, transparent 47%, var(--ph-line) 47% 53%, transparent 53%); border-radius: 1.2cqw; min-height: 0; display: grid; place-items: center; font-family: var(--f-mono); font-size: 2.4cqw; color: var(--muted); }
+.ph.face { background-image: radial-gradient(circle at 50% 38%, var(--ph-line) 0 13%, transparent 13.5%), radial-gradient(ellipse at 50% 100%, var(--ph-line) 0 34%, transparent 34.5%); }
+.ln { display: grid; gap: 1.6cqw; align-content: start; }
+.ln i { display: block; height: 1.3cqw; background: var(--ph); border-radius: 1cqw; }
+.ln i:nth-child(3n) { width: 82%; } .ln i:last-child { width: 55%; }
+.ln b { font-size: 3cqw; font-weight: 700; margin-top: .8cqw; }
+.box { border: .35cqw solid var(--ph-line); border-radius: 1.2cqw; padding: 2.4cqw; display: grid; gap: 1.2cqw; align-content: start; }
+.sig { border-bottom: .35cqw solid var(--mock-ink); width: 40%; height: 4cqw; }
+.c2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3cqw; min-height: 0; }
+.c-img-text { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3.5cqw; min-height: 0; }
+.g4 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2cqw; min-height: 0; }
+.g4 > div, .g3 > div { display: grid; grid-template-rows: 1fr auto; gap: .8cqw; min-height: 0; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2cqw; min-height: 0; }
+.strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.4cqw; }
+.strip .ph { aspect-ratio: 3 / 2; font-size: 2cqw; }
+.tree { font-family: var(--f-mono); font-size: 2.6cqw; line-height: 1.5; white-space: pre; color: var(--mock-ink); }
+.link { font-family: var(--f-mono); font-size: 2.5cqw; color: var(--accent); text-decoration: underline; overflow-wrap: anywhere; }
+.full { padding: 0; }
+.full .ph { border-radius: 0; height: 100%; }
+.full .fullcap { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.6cqw 3cqw; background: var(--mock); font-family: var(--f-mono); font-size: 2.3cqw; color: var(--muted); }
+.diag { position: relative; border: .35cqw dashed var(--ph-line); border-radius: 1.2cqw; }
+.diag i { position: absolute; font-style: normal; font-family: var(--f-mono); font-size: 2.2cqw; background: var(--accent-soft); color: var(--mock-ink); border-radius: .8cqw; padding: .4cqw 1cqw; }
+
+/* two-column info blocks */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.cols2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.card { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 22px; color: var(--accent); }
+.card ul, .card ol { margin: 0; padding-left: 20px; display: grid; gap: 5px; }
+.card p { color: var(--muted); font-size: 15px; }
+.ex { font-family: var(--f-mono); font-size: 13px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6; }
+.ex .ok { color: var(--accent); font-weight: 600; }
+.ex .no { color: var(--due); text-decoration: line-through; }
+
+/* marks */
+.marks { display: grid; gap: 6px; }
+.mk { display: grid; grid-template-columns: minmax(0, 11rem) 1fr 4rem; align-items: center; gap: 10px; font-size: 14.5px; }
+.mk .bar { height: 10px; border-radius: 5px; background: var(--accent-soft); overflow: hidden; }
+.mk .bar i { display: block; height: 100%; background: var(--accent); }
+.mk .n { font-family: var(--f-mono); font-size: 13px; text-align: right; color: var(--muted); white-space: nowrap; }
+
+/* checklist */
+.check { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.check label { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: start; cursor: pointer; padding: 4px 0; }
+.check input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--accent); }
+.check input:checked + span { color: var(--muted); text-decoration: line-through; }
+.check .must { color: var(--due); font-weight: 600; }
+.check code { white-space: nowrap; }
+.reset { justify-self: start; font: inherit; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 3px 12px; cursor: pointer; }
+
+/* reference table */
+.refs { display: grid; gap: 12px; }
+.ref { display: grid; grid-template-columns: minmax(0, 10rem) 1fr; gap: 6px 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
+.ref > b { font-size: 15px; }
+.ref > div { display: grid; gap: 6px; min-width: 0; }
+.ref .lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 640px) { .ref { grid-template-columns: 1fr; } .mk { grid-template-columns: minmax(0, 8rem) 1fr 3.6rem; } }
+
+.foot { font-size: 13px; color: var(--muted); margin: 0; }
+
+/* A1 theme, techniques, planner */
+.theme { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px 28px; align-items: center; background: var(--sheet); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 8px; padding: 18px 20px; }
+.theme .k { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.theme h3 { margin: 4px 0 8px; font-family: var(--f-display); font-weight: 600; font-size: 24px; }
+.theme p { color: var(--muted); }
+.theme blockquote { margin: 0; font-family: var(--f-display); font-size: 26px; line-height: 1.15; font-weight: 600; }
+.theme cite { display: block; margin-top: 8px; font-family: var(--f-body); font-style: normal; font-size: 13px; font-weight: 400; color: var(--muted); }
+@media (max-width: 720px) { .theme { grid-template-columns: 1fr; } }
+.tcols { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.tcol { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.tcol .hd { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--rule); padding-bottom: 6px; }
+.tcol .cn { font-family: var(--f-mono); font-weight: 600; font-size: 13px; color: var(--accent); white-space: nowrap; }
+.tcol h4 { margin: 0; font-size: 16px; line-height: 1.25; }
+.tcol ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+.tcol li b { display: block; font-size: 15px; }
+.tcol li span { color: var(--muted); font-size: 14px; }
+.tcol .ai { font-size: 13px; background: var(--accent-soft); border-radius: 5px; padding: 5px 8px; }
+.tcol.used { border-color: var(--accent); box-shadow: inset 0 3px 0 var(--accent); }
+.tcol .usedby { font-family: var(--f-mono); font-size: 11px; color: var(--accent); margin-left: auto; white-space: nowrap; }
+.planner { background: var(--sheet); border: 1px solid var(--rule); border-radius: 10px; padding: 18px; display: grid; gap: 16px; }
+.pq { display: grid; gap: 6px; }
+.pq label, .jcard label { font-weight: 600; font-size: 15px; }
+.step { font-family: var(--f-mono); font-size: 11px; font-weight: 600; color: var(--sheet); background: var(--accent); border-radius: 4px; padding: 1px 6px; margin-right: 8px; vertical-align: 1px; }
+.planner textarea, .planner input[type=text], .planner select { width: 100%; font: inherit; font-size: 15px; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; }
+.planner textarea:focus, .planner input:focus, .planner select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.jgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 14px; }
+.jcard { border: 1px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 10px; align-content: start; min-width: 0; background: var(--paper); }
+.jcard.ok { border-color: var(--accent); }
+.jcard h4 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 22px; display: flex; align-items: baseline; gap: 10px; }
+.jcard h4 .col { font-family: var(--f-mono); font-size: 12px; font-weight: 400; color: var(--accent); }
+.jcard .f { display: grid; gap: 4px; }
+.jcard .hint { font-size: 13px; color: var(--muted); }
+.jcard textarea, .jcard input[type=text], .jcard select { background: var(--sheet); }
+.pcheck { display: grid; gap: 4px; font-size: 15px; }
+.pcheck .row { display: grid; grid-template-columns: 22px 1fr; gap: 6px; }
+.pcheck .y { color: var(--accent); font-weight: 700; }
+.pcheck .n { color: var(--muted); }
+.pcheck .warn { color: var(--due); font-weight: 600; }
+.pbtns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.pbtn { font: inherit; font-size: 14px; font-weight: 600; border-radius: 999px; padding: 7px 16px; cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: var(--sheet); }
+.pbtn.ghost { background: transparent; color: var(--accent); }
+.pnote { font-size: 14px; color: var(--muted); }
+
+/* quiz */
+.qscore { position: sticky; top: 56px; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; }
+.qscore .num { font-family: var(--f-mono); font-weight: 600; font-variant-numeric: tabular-nums; }
+.qscore .track { flex: 1 1 140px; height: 8px; border-radius: 4px; background: var(--accent-soft); overflow: hidden; }
+.qscore .track i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+.qscore .msg { color: var(--muted); font-size: 14px; flex-basis: 100%; }
+.qscore .msg:empty { display: none; }
+.qlist { display: grid; gap: 14px; counter-reset: q; }
+.q { background: var(--sheet); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; margin: 0; display: grid; gap: 10px; min-width: 0; }
+.q legend { float: left; width: 100%; padding: 0; font-weight: 700; font-size: 16.5px; line-height: 1.35; }
+.q legend::before { counter-increment: q; content: counter(q, decimal-leading-zero); font-family: var(--f-mono); font-size: 12px; color: var(--accent); margin-right: 8px; }
+.q .opts { clear: both; display: grid; gap: 6px; }
+.q label { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: start; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 6px; cursor: pointer; }
+.q label:hover { border-color: var(--accent); }
+.q input { width: 17px; height: 17px; margin: 2px 0 0; accent-color: var(--accent); }
+.q label.right { border-color: var(--accent); background: var(--accent-soft); }
+.q label.wrong { border-color: var(--due); background: var(--due-soft); }
+.q.done label { cursor: default; }
+.q .why { font-size: 15px; border-left: 3px solid var(--accent); padding-left: 10px; }
+.q .why.bad { border-left-color: var(--due); }
+.q .why b { font-family: var(--f-mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; margin-right: 6px; }
+.q .why[hidden] { display: none; }
+
+/* top menu + footer in the hub's dark green (same on every page of the site) */
+.topbar { position: sticky; top: 0; z-index: 20; background: rgba(10, 15, 12, .94); backdrop-filter: blur(10px); border-bottom: 1px solid #1f2b24; }
+.topbar-inner { max-width: 1080px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 18px; }
+.topbar .logo { font-family: "Syne", "Helvetica Neue", Arial, sans-serif; font-weight: 800; font-size: 1.15rem; text-decoration: none; color: #e8efe9; white-space: nowrap; }
+.topbar .logo span { color: #5aad72; }
+.topbar nav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.topbar nav a { text-decoration: none; font-weight: 600; font-size: .92rem; color: #b9c4bc; padding: 6px 11px; border-radius: 999px; white-space: nowrap; }
+.topbar nav a:hover, .topbar nav a[aria-current] { background: #13201a; color: #fff; }
+@media (max-width: 640px) { .topbar .logo { display: none; } .topbar nav { margin-left: 0; } }
+.site-foot { background: #0a0f0c; color: #8b958e; text-align: center; padding: 2.75rem 16px 3.25rem; font-size: .9rem; line-height: 1.8; border-top: 1px solid #1f2b24; }
+.site-foot .school { color: #9aa39c; letter-spacing: 2px; text-transform: uppercase; font-size: .8rem; }
+.site-foot .university { color: #e8efe9; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+.site-foot .copyright { margin-top: .9rem; font-size: .88rem; }
+.site-foot .disclaimer { max-width: 40rem; margin: 10px auto 0; font-size: .82rem; line-height: 1.5; color: #7f8a82; }
+.site-foot a { color: #7dd99b; text-decoration: none; }
+@media print { .topbar, .jump, .reset { display: none; } body { background: #fff; } }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><a class="logo" href="./">Creative <span>Photography</span></a><nav aria-label="Creative Photography"><a href="./">Hub</a><a href="roadmap.html">Roadmap</a><a href="assignments.html" aria-current="page">Assignment guide</a><a href="https://rmit.instructure.com/courses/174747" target="_blank" rel="noopener">Canvas</a></nav></div></div>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">VART3670 · Semester 3, 2026 · How to format and submit</div>
+    <h1>Assignment Guide</h1>
+    <p class="lede">What each submission looks like, page by page: what goes in the PDF, how to name your files, how to share your RAW files and how to reference. Read it before you start laying out, not the night it is due.</p>
+    <nav class="jump" aria-label="On this page">
+      <a href="#basics">Basics for every PDF</a>
+      <a href="#a1">A1 Visual Journals</a>
+      <a href="#planner-h">A1 journal planner</a>
+      <a href="#a2">A2 Final Project</a>
+      <a href="#a3">A3 Documentation</a>
+      <a href="#files">Files, naming, OneDrive</a>
+      <a href="#refs">Referencing</a>
+      <a href="#quiz">Check yourself: quiz</a>
+    </nav>
+  </header>
+
+  <!-- ============ BASICS ============ -->
+  <section id="basics">
+    <h2>Basics for every PDF</h2>
+    <p class="sub">These apply to A1, A2 and A3. Use any layout tool you like (Canva, InDesign, Keynote, PowerPoint, Google Slides) and export one PDF.</p>
+    <div class="basics">
+      <div class="tip"><b>Landscape 16:9 pages</b><span>Set the page to 16:9 before you start, for example 1920 x 1080 px or 33.87 x 19.05 cm (Canva "Presentation 16:9"). Every page in the PDF is the same size.</span></div>
+      <div class="tip"><b>Export to PDF</b><span>Export your layout as PDF. Don't upload a Word file, a Canva link or loose images. A1 is best as one PDF (see A1 for the 4-file option).</span></div>
+      <div class="tip"><b>Let the photos lead</b><span>Show photos large, on a plain background. Don't put text over your photos, don't add drop shadows, frames or stickers.</span></div>
+      <div class="tip"><b>Readable text</b><span>One or two typefaces at most. Body text at least 18 pt on a 16:9 page, so it reads without zooming. Left-align paragraphs.</span></div>
+      <div class="tip"><b>Caption every photo</b><span>A short line under each photo: number, title and year. The number matches your file name. No camera settings needed. See the caption examples below.</span></div>
+      <div class="tip"><b>Page numbers and proofreading</b><span>Number your pages. The briefs ask for writing free of grammar and spelling errors, so read it aloud once before you export.</span></div>
+      <div class="tip"><b>Your own photos, this semester</b><span>Every photo is taken by you this semester for this course. Reference any photographer or artist who inspired you.</span></div>
+      <div class="tip"><b>AI on images: Beyond the Lens only</b><span>AI collaboration on images is accepted only in an A1 journal using a Column 3 technique (Camera &amp; Optical Disruption, the Week 3 Beyond the Lens approach), declared and referenced. Everywhere else, use AI only to plan or check grammar, never to generate, edit or alter images.</span></div>
+    </div>
+    <div class="cols">
+      <div class="card">
+        <h3>Caption format</h3>
+        <p>Number · title · year. Keep it on one line. Camera settings are not needed.</p>
+        <div class="ex"><span class="ok">1.3  Steam and Hands, 2026</span>
+
+<span class="no">IMG_4021.JPG</span>
+<span class="no">my favourite photo!!</span></div>
+        <p>In A1, <code>1.3</code> means Journal 1, photo 3. In A2, use the image number in your sequence: <code>7</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Exporting your JPGs</h3>
+        <p>A1 and A2 also need a zip of high-res JPGs (300 dpi, full size). In Lightroom Classic, File &gt; Export:</p>
+        <ul>
+          <li>File Settings: JPEG, Quality 90 to 100, Color Space sRGB</li>
+          <li>Image Sizing: untick "Resize to Fit", Resolution 300 pixels per inch</li>
+          <li>File Naming: rename to the course pattern (see <a href="#files">Files</a>)</li>
+          <li>Output Sharpening: Screen, Standard</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A1 ============ -->
+  <section id="a1">
+    <div class="ahead">
+      <div class="row"><span class="code">A1</span><span class="w">40% of the course</span><span class="due">Due Fri Dec 4, 22:00</span></div>
+      <h2>Visual Journals</h2>
+      <div class="facts"><span>Theme: rễ-root</span><span>4 journals, each from a different technique column</span><span>4 final photos per journal, 16 in total</span><span>250 to 500 words per journal</span><span>Behind-the-scenes in every journal</span><span>One PDF preferred, 4 PDFs accepted</span><span>+ zip of JPGs</span></div>
+    </div>
+    <div class="stop"><b>Not marked if missing</b><ul><li>Behind-the-scenes photos that clearly show your face and the work</li><li>A working OneDrive link to your original RAW files (and your behind-the-scenes photos)</li><li>The filled-in Statement of Authorship (download it from the A1 page on Canvas)</li></ul></div>
+
+    <div class="theme">
+      <div>
+        <span class="k">The theme</span>
+        <h3>rễ-root: connect your personal identity to a visual story</h3>
+        <p>All four journals explore one idea about you: where you come from, what you carry, who you are becoming. Identity is also the most common theme in real open calls, so this is practice for work beyond the classroom.</p>
+      </div>
+      <blockquote>"The most personal is the most creative."<cite>Martin Scorsese, quoted by Bong Joon-ho</cite></blockquote>
+    </div>
+
+    <h3 id="techniques">Step 1 · Know your techniques</h3>
+    <p class="sub">The techniques are not styles to copy, but methods you apply to support your concept. Choose the ones that strengthen meaning, intention and visual communication. <b>Each of your 4 journals uses a technique from a different column.</b> You can combine techniques inside one journal. The same board is on the <a href="https://au.miro.com/app/board/u3jVOf_5Q6E=/?share_link_id=781378198312" target="_blank" rel="noopener">class Miro board</a>, which has the latest format notes.</p>
+    <div class="tcols" id="tcols"></div>
+
+    <h3 id="planner-h">Step 2 · Plan your 4 journals</h3>
+    <p class="sub">Answer the questions below. Columns you have already used are locked in the other journals, so you can't pick two from the same column. Your plan stays in this browser only. Copy it to bring to your lecturer consultation.</p>
+    <div class="planner" id="planner">
+      <div class="pq">
+        <label for="p-idea"><span class="step">Q1</span>What is your rễ-root idea? Which part of your identity, roots or story will the journals explore?</label>
+        <textarea id="p-idea" rows="2" placeholder="For example: my grandmother's kitchen and the recipes that connect me to my family's past"></textarea>
+      </div>
+      <div class="jgrid" id="jgrid"></div>
+      <div class="pcheck" id="pcheck" aria-live="polite"></div>
+      <div class="pbtns">
+        <button type="button" class="pbtn" id="p-copy">Copy my plan</button>
+        <button type="button" class="pbtn ghost" id="p-demo">Show an example</button>
+        <button type="button" class="pbtn ghost" id="p-clear">Clear</button>
+        <span class="pnote" id="p-note"></span>
+      </div>
+    </div>
+
+    <h3>Step 3 · Lay out your PDF, page by page</h3>
+    <p class="sub">Every journal follows the same flow: overview, the 4 photos one by one, reflection, mood board, behind the scenes.</p>
+    <div class="pages">
+      <figure class="pg">
+        <div class="page" data-n="1" style="grid-template-columns:1.1fr 1fr;align-items:end">
+          <div style="display:grid;gap:2cqw;align-content:end"><span class="k">VART3670 Creative Photography · A1</span><span class="t">Visual Journals</span><span class="s">Peter Parker · s1234567<br>Lecturer: [name] · Semester 3, 2026</span></div>
+          <div class="ph" style="height:100%">your best photo</div>
+        </div>
+        <figcaption><b><span class="no">01</span>Cover</b><span>Your rễ-root title, name, student number, lecturer, semester. One of your 16 photos.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="2" style="grid-template-rows:auto 1fr">
+          <span class="t2">Statement of Authorship</span>
+          <div class="box"><div class="ln"><i></i><i></i><i></i><i></i></div><div style="display:flex;gap:4cqw;align-items:end"><div class="sig"></div><span class="s">Signed · dated</span></div></div>
+        </div>
+        <figcaption><b><span class="no">02</span>Statement of Authorship</b><span>The Canvas form, filled in and signed. Paste it in as a page.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="3" style="grid-template-rows:auto auto 1fr">
+          <span class="t2">Files and contents</span>
+          <div class="box"><span class="k">RAW files + behind the scenes (OneDrive)</span><span class="link">https://rmiteduau-my.sharepoint.com/:f:/g/personal/s1234567_...</span></div>
+          <div class="ln"><b>Contents</b><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">03</span>Links and contents</b><span>Your OneDrive link as a clickable link, and a contents list: journal, technique, page.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="4" style="grid-template-columns:1fr 1.25fr;align-items:center">
+          <div style="display:grid;gap:2cqw"><span class="k">Journal 1 · Black and White</span><span class="t">Steam and Hands</span><span class="s">One line on the idea.</span></div>
+          <div class="g4" style="height:100%"><div class="ph">1.1</div><div class="ph">1.2</div><div class="ph">1.3</div><div class="ph">1.4</div></div>
+        </div>
+        <figcaption><b><span class="no">04</span>Journal overview</b><span>Journal number, technique, your title, and all 4 photos small in a 2x2 grid.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page full" data-n="5">
+          <div class="ph" style="margin:4cqw 10cqw 9cqw;height:auto">photo 1.1</div>
+          <div class="fullcap">1.1 · Title, 2026</div>
+        </div>
+        <figcaption><b><span class="no">05</span>Photo 1, full page</b><span>One photo per page, large, with its caption.</span></figcaption>
+      </figure>
+      <figure class="pg rep">
+        <div class="page full">
+          <div class="c2" style="padding:4cqw 4cqw 9cqw;height:100%"><div class="ph">1.2</div><div class="ph">1.3 ...</div></div>
+          <div class="fullcap">Pages 6 to 8 · photos 1.2, 1.3, 1.4</div>
+        </div>
+        <figcaption><b>Photos 2, 3 and 4</b><span>Same layout. A composite (double exposure, joiner, collage) counts as one photo.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="9" style="grid-template-columns:1.4fr 1fr">
+          <div class="ln"><b>Why this technique</b><i></i><i></i><b>Why this subject</b><i></i><i></i><b>How I made it</b><i></i><i></i><i></i><b>What I learned</b><i></i><i></i></div>
+          <div style="display:grid;grid-template-rows:1fr 1fr auto;gap:1.4cqw"><div class="ph">1.2</div><div class="ph">1.4</div><span class="s">348 words</span></div>
+        </div>
+        <figcaption><b><span class="no">06</span>Reflection, 250 to 500 words</b><span>How and why you chose the technique(s) and the subject. Write it here after the 4 photos, or as short notes beside each photo.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="10" style="grid-template-rows:auto 1fr">
+          <span class="t2">Mood board and inspiration</span>
+          <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:1.6cqw"><div class="ph" style="grid-row:span 2">artist work</div><div class="ph">artwork</div><div class="ph">colour, texture</div><div class="ph">sketch</div><div class="ln" style="align-content:center"><i></i><i></i><i></i></div></div>
+        </div>
+        <figcaption><b><span class="no">07</span>Mood board and inspiration</b><span>Artists, artworks, references and sketches that shaped the journal. Credit each one.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="11" style="grid-template-rows:auto 1fr">
+          <span class="t2">Behind the scenes · Journal 1</span>
+          <div class="g3"><div><div class="ph face">you</div><span class="cap">In the kitchen, setting up</span></div><div><div class="ph face">you</div><span class="cap">Checking the shot</span></div><div><div class="ph">setup</div><span class="cap">Light and camera position</span></div></div>
+        </div>
+        <figcaption><b><span class="no">08</span>Behind the scenes</b><span>Your face must be visible, with the work in progress. Required in every journal.</span></figcaption>
+      </figure>
+      <figure class="pg rep">
+        <div class="page" style="place-items:center;text-align:center">
+          <div style="display:grid;gap:2cqw;justify-items:center"><span class="k">Pages 12 to 35</span><span class="t2">Journals 2, 3 and 4</span><span class="s">Same flow as Journal 1, each with a technique from a different column</span></div>
+        </div>
+        <figcaption><b>Repeat for Journals 2, 3 and 4</b><span>Overview, 4 photos, reflection, mood board, behind the scenes.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="36" style="grid-template-rows:auto 1fr">
+          <span class="t2">References</span>
+          <div class="ln"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">09</span>References</b><span>Every photographer, artwork, book, website or AI tool you mention, in RMIT Harvard, A to Z.</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="cols cols2">
+      <div class="card">
+        <h3>What to write in each reflection</h3>
+        <p>Focus on <b>how and why</b> you chose the technique(s) and the subject. Not a diary of what happened in class. Suggested headings:</p>
+        <ol>
+          <li><b>Why this technique.</b> How does it support your rễ-root idea? What does it do that a straight photo can't?</li>
+          <li><b>Why this subject.</b> What part of your identity or story does it hold?</li>
+          <li><b>How you made it.</b> Where, when, materials, light or editing steps, and what you changed between attempts.</li>
+          <li><b>What you learned.</b> What worked, what didn't, what you would try next. Point to your mood board and reference the artists.</li>
+        </ol>
+        <p>Two ways to place it: <b>Type 1</b>, a short note beside each photo; <b>Type 2</b>, one text after the 4 photos. Either way, 250 to 500 words per journal in total.</p>
+        <p>If a Column 3 journal uses AI collaboration, say which tool, on which photos and what it did.</p>
+      </div>
+      <div class="card">
+        <h3>One PDF, or four</h3>
+        <p>One PDF with all 4 journals and all 16 photos is preferred: one upload, and your journal reads start to finish.</p>
+        <p>If one file is too big to upload, you may submit 4 PDFs, one per journal:</p>
+        <div class="ex">A1-1_peterparker_s1234567.pdf
+A1-2_peterparker_s1234567.pdf
+A1-3_peterparker_s1234567.pdf
+A1-4_peterparker_s1234567.pdf</div>
+        <p>Each of the 4 files needs its own cover, the OneDrive link and the Statement of Authorship, so no file is incomplete on its own.</p>
+      </div>
+      <div class="card">
+        <h3>How A1 is marked</h3>
+        <div class="marks">
+          <div class="mk"><span>Subject knowledge</span><span class="bar"><i style="width:50%"></i></span><span class="n">20 / 40</span></div>
+          <div class="mk"><span>Aesthetic achievement</span><span class="bar"><i style="width:25%"></i></span><span class="n">10 / 40</span></div>
+          <div class="mk"><span>Technical skills</span><span class="bar"><i style="width:25%"></i></span><span class="n">10 / 40</span></div>
+        </div>
+        <p>Half the marks are subject knowledge, so the reflections, mood boards and references matter as much as the photos.</p>
+      </div>
+      <div class="card">
+        <h3>A1 checklist</h3>
+        <ul class="check" data-key="a1">
+          <li><label><input type="checkbox"><span>One rễ-root idea running through all 4 journals</span></label></li>
+          <li><label><input type="checkbox"><span>4 journals, each with a technique from a different column</span></label></li>
+          <li><label><input type="checkbox"><span>4 final photos per journal, each captioned (a composite counts as one)</span></label></li>
+          <li><label><input type="checkbox"><span>Each journal: overview, photos, reflection, mood board, behind the scenes</span></label></li>
+          <li><label><input type="checkbox"><span>250 to 500 words per journal, word count shown</span></label></li>
+          <li><label><input type="checkbox"><span class="must">Behind-the-scenes in every journal, face visible</span></label></li>
+          <li><label><input type="checkbox"><span class="must">OneDrive link to RAW + behind-the-scenes, opens for anyone at RMIT</span></label></li>
+          <li><label><input type="checkbox"><span class="must">Statement of Authorship filled in and included</span></label></li>
+          <li><label><input type="checkbox"><span>References page, RMIT Harvard</span></label></li>
+          <li><label><input type="checkbox"><span>Zip of 16 JPGs, 300 dpi, full size, named <code>1-1_peterparker_s1234567.jpg</code></span></label></li>
+          <li><label><input type="checkbox"><span>Any AI on images only in a Column 3 journal, declared and referenced</span></label></li>
+          <li><label><input type="checkbox"><span>PDF (or 4 PDFs) and zip uploaded to the A1 page on Canvas</span></label></li>
+        </ul>
+        <button class="reset" type="button" data-reset="a1">Clear ticks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A2 ============ -->
+  <section id="a2">
+    <div class="ahead">
+      <div class="row"><span class="code">A2</span><span class="w">40% of the course</span><span class="due">Due Fri Jan 15, 22:00</span></div>
+      <h2>Final Project</h2>
+      <div class="facts"><span>Your own concept, no brief</span><span>10 to 30 connected images</span><span>Topic approved by end of Week 8</span><span>Shown in class in Week 12</span><span>PDF + zip of JPGs</span></div>
+    </div>
+    <div class="stop"><b>Not marked if missing</b><ul><li>Behind-the-scenes photos that clearly show your face and the work</li><li>A working OneDrive link to your original RAW files and behind-the-scenes photos</li><li>The filled-in Statement of Authorship (download it from the A2 page on Canvas)</li></ul></div>
+
+    <h3>Your PDF, page by page</h3>
+    <div class="pages">
+      <figure class="pg">
+        <div class="page" data-n="1" style="grid-template-rows:1fr auto">
+          <div class="ph">your strongest image, full width</div>
+          <div style="display:flex;justify-content:space-between;align-items:end;gap:3cqw"><span class="t">Project Title</span><span class="s" style="text-align:right">Peter Parker · s1234567<br>VART3670 · A2 · 2026</span></div>
+        </div>
+        <figcaption><b><span class="no">01</span>Cover</b><span>Your project title, name, student number, course and assignment.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="2" style="grid-template-rows:auto 1fr">
+          <span class="t2">Statement of Authorship</span>
+          <div class="box"><div class="ln"><i></i><i></i><i></i><i></i></div><div style="display:flex;gap:4cqw;align-items:end"><div class="sig"></div><span class="s">Signed · dated</span></div></div>
+        </div>
+        <figcaption><b><span class="no">02</span>Statement of Authorship</b><span>Filled in and signed.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="3" style="grid-template-rows:auto auto 1fr">
+          <span class="t2">Files</span>
+          <div class="box"><span class="k">RAW files + behind the scenes (OneDrive)</span><span class="link">https://rmiteduau-my.sharepoint.com/:f:/g/personal/s1234567_...</span></div>
+          <div class="ln"><b>Zip on Canvas</b><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">03</span>Links</b><span>The OneDrive link, clickable, and the name of your zip file.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="4" style="grid-template-columns:1fr 1.4fr;align-items:center">
+          <span class="t">Project Title</span>
+          <div class="ln"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">04</span>Artist statement</b><span>Recommended: the short statement you develop in Workshop 04, about 100 to 200 words.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page full" data-n="5">
+          <div class="ph" style="margin:4cqw 10cqw 9cqw;height:auto">image 1</div>
+          <div class="fullcap">1 · Title, 2026</div>
+        </div>
+        <figcaption><b><span class="no">05</span>Image 1</b><span>One image per page, large, on a plain background. The number matches the file name.</span></figcaption>
+      </figure>
+      <figure class="pg rep">
+        <div class="page full">
+          <div class="ph" style="margin:4cqw 22cqw 9cqw;height:auto">image 2 (portrait)</div>
+          <div class="fullcap">2 · Title, 2026</div>
+        </div>
+        <figcaption><b>Images 2 to the last, in order</b><span>The PDF order is your sequence. Sequence counts toward Presentation and communication.</span></figcaption>
+      </figure>
+      <figure class="pg opt">
+        <div class="page" style="grid-template-rows:auto 1fr">
+          <span class="t2">Sequence</span>
+          <div style="display:grid;gap:1.6cqw;align-content:start"><div class="strip"><div class="ph">1</div><div class="ph">2</div><div class="ph">3</div><div class="ph">4</div><div class="ph">5</div><div class="ph">6</div></div><div class="strip"><div class="ph">7</div><div class="ph">8</div><div class="ph">9</div><div class="ph">10</div><div class="ph">11</div><div class="ph">12</div></div></div>
+        </div>
+        <figcaption><b><span class="no">06</span>Sequence overview</b><span>All images small, in order, on one page. Helps the reader see the series at once.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" style="grid-template-rows:auto 1fr">
+          <span class="t2">Behind the scenes</span>
+          <div class="g3"><div><div class="ph face">you</div><span class="cap">Shoot 1, Thao Dien</span></div><div><div class="ph face">you</div><span class="cap">Studio setup, Week 9</span></div><div><div class="ph face">you</div><span class="cap">Editing session</span></div></div>
+        </div>
+        <figcaption><b><span class="no">07</span>Behind the scenes</b><span>Your face visible, across the project. Required.</span></figcaption>
+      </figure>
+      <figure class="pg opt">
+        <div class="page" style="grid-template-rows:auto 1fr">
+          <span class="t2">References</span>
+          <div class="ln"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">08</span>References</b><span>Needed if your work is inspired by or pays homage to another artist.</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Laying out the images</h3>
+        <ul>
+          <li>Same margins and the same position for every image page, so the photos change and nothing else does.</li>
+          <li>Don't crop a portrait image to fill a landscape page. Leave space on both sides.</li>
+          <li>Pairs are fine when two images work together, but keep most images on their own page.</li>
+          <li>Your JPG numbers, PDF order and Week 12 showcase order are the same sequence.</li>
+          <li>Banned topic: a set of only abstract images (for example close-ups of walls). Confirm your topic with your lecturer.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>How A2 is marked</h3>
+        <div class="marks">
+          <div class="mk"><span>Aesthetic achievement</span><span class="bar"><i style="width:50%"></i></span><span class="n">40 / 80</span></div>
+          <div class="mk"><span>Technical skills</span><span class="bar"><i style="width:37.5%"></i></span><span class="n">30 / 80</span></div>
+          <div class="mk"><span>Presentation and communication</span><span class="bar"><i style="width:12.5%"></i></span><span class="n">10 / 80</span></div>
+        </div>
+        <p>Presentation and communication is the order and arrangement of your images, so the sequence is marked.</p>
+      </div>
+      <div class="card">
+        <h3>A2 checklist</h3>
+        <ul class="check" data-key="a2">
+          <li><label><input type="checkbox"><span>Topic approved by your lecturer (by end of Week 8)</span></label></li>
+          <li><label><input type="checkbox"><span>10 to 30 images, one sequence, all taken this semester</span></label></li>
+          <li><label><input type="checkbox"><span>One image per page, numbered to match the files</span></label></li>
+          <li><label><input type="checkbox"><span class="must">Behind-the-scenes photos, face visible</span></label></li>
+          <li><label><input type="checkbox"><span class="must">OneDrive link to RAW + behind-the-scenes, opens for anyone at RMIT</span></label></li>
+          <li><label><input type="checkbox"><span class="must">Statement of Authorship filled in and included</span></label></li>
+          <li><label><input type="checkbox"><span>Zip of JPGs, 300 dpi, full size, named <code>1_peterparker_s1234567.jpg</code></span></label></li>
+          <li><label><input type="checkbox"><span>PDF and zip both uploaded to the A2 page on Canvas</span></label></li>
+        </ul>
+        <button class="reset" type="button" data-reset="a2">Clear ticks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A3 ============ -->
+  <section id="a3">
+    <div class="ahead">
+      <div class="row"><span class="code">A3</span><span class="w">20% of the course</span><span class="due">Due Fri Jan 15, 22:00</span></div>
+      <h2>Final Project Documentation</h2>
+      <div class="facts"><span>750 to 1000 words</span><span>Workflow, challenges, solutions, evaluation</span><span>Supporting visuals</span><span>PDF only</span></div>
+    </div>
+    <div class="stop"><b>Must be included</b><ul><li>The filled-in Statement of Authorship (download it from the A3 page on Canvas)</li></ul></div>
+
+    <h3>Your PDF, page by page</h3>
+    <div class="pages">
+      <figure class="pg">
+        <div class="page" data-n="1" style="grid-template-columns:1.1fr 1fr;align-items:end">
+          <div style="display:grid;gap:2cqw;align-content:end"><span class="k">VART3670 · A3 Documentation</span><span class="t">Project Title</span><span class="s">Peter Parker · s1234567 · 2026</span></div>
+          <div class="ph face" style="height:100%">behind the scenes</div>
+        </div>
+        <figcaption><b><span class="no">01</span>Cover</b><span>Same project title as A2, plus your name and student number.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="2" style="grid-template-rows:auto 1fr">
+          <span class="t2">Statement of Authorship</span>
+          <div class="box"><div class="ln"><i></i><i></i><i></i><i></i></div><div style="display:flex;gap:4cqw;align-items:end"><div class="sig"></div><span class="s">Signed · dated</span></div></div>
+        </div>
+        <figcaption><b><span class="no">02</span>Statement of Authorship</b><span>Filled in and signed.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="3" style="grid-template-columns:1.3fr 1fr">
+          <div class="ln"><b>1. Concept and research</b><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div style="display:grid;grid-template-rows:1fr auto;gap:1cqw"><div class="ph">mood board</div><span class="cap">Fig. 1 Mood board, Week 7</span></div>
+        </div>
+        <figcaption><b><span class="no">03</span>Concept and research</b><span>Where the idea came from, what you looked at, how the topic changed after feedback.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="4" style="grid-template-columns:1fr 1.2fr">
+          <div class="diag"><i style="left:8%;top:12%">key light</i><i style="right:8%;top:30%">reflector</i><i style="left:38%;bottom:12%">camera</i><i style="left:40%;top:44%">model</i></div>
+          <div class="ln"><b>2. Workflow</b><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">04</span>Workflow</b><span>Planning, shooting and editing. A setup drawing or lighting diagram belongs here.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="5" style="grid-template-columns:1fr 1fr">
+          <div class="ln"><b>3. Challenges and solutions</b><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="c2" style="grid-template-rows:1fr auto"><div class="ph">before</div><div class="ph">after</div><span class="cap">Fig. 4 First attempt</span><span class="cap">Fig. 5 Reshoot</span></div>
+        </div>
+        <figcaption><b><span class="no">05</span>Challenges and solutions</b><span>Two or three real problems, what you tried, and what fixed them. Before and after images help.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="6" style="grid-template-rows:auto 1fr">
+          <span class="t2">4. Evaluation</span>
+          <div class="c2"><div class="ln"><i></i><i></i><i></i><i></i><i></i></div><div class="ln"><i></i><i></i><i></i><span class="s" style="margin-top:2cqw">Total: 912 words</span></div></div>
+        </div>
+        <figcaption><b><span class="no">06</span>Evaluation</b><span>How well the final series does what you set out to do, and what you would change. End with your word count.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="7" style="grid-template-rows:auto 1fr">
+          <span class="t2">Behind the scenes</span>
+          <div class="g3"><div><div class="ph face">you</div><span class="cap">Fig. 6 Location scout</span></div><div><div class="ph">contact sheet</div><span class="cap">Fig. 7 Edit, round 2</span></div><div><div class="ph">prints</div><span class="cap">Fig. 8 Print edit, Week 11</span></div></div>
+        </div>
+        <figcaption><b><span class="no">07</span>Supporting material</b><span>Behind the scenes, contact sheets, print edits, inspiration. Number them as figures.</span></figcaption>
+      </figure>
+      <figure class="pg">
+        <div class="page" data-n="8" style="grid-template-rows:auto 1fr">
+          <span class="t2">References</span>
+          <div class="ln"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <figcaption><b><span class="no">08</span>References</b><span>RMIT Harvard, A to Z.</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Writing a reflection, not a diary</h3>
+        <ul>
+          <li>Explain decisions, not just events: "I moved the shoot indoors because..." rather than "Then I went to District 4."</li>
+          <li>Refer to your figures in the text: "(Fig. 4)".</li>
+          <li>Be specific about challenges. "The light was hard" says little; "midday light flattened the faces, so I moved the shoot to 17:00" says a lot.</li>
+          <li>Evaluate honestly. Saying what didn't work, and why, is part of the mark.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>How A3 is marked</h3>
+        <div class="marks">
+          <div class="mk"><span>Reflection</span><span class="bar"><i style="width:100%"></i></span><span class="n">100%</span></div>
+        </div>
+        <p>A3 is marked on one criterion: how clearly you communicate your intent and how you carried it out, in words and images.</p>
+      </div>
+      <div class="card">
+        <h3>A3 checklist</h3>
+        <ul class="check" data-key="a3">
+          <li><label><input type="checkbox"><span>750 to 1000 words, word count shown</span></label></li>
+          <li><label><input type="checkbox"><span>Covers workflow, challenges, how you solved them, and an evaluation</span></label></li>
+          <li><label><input type="checkbox"><span>Supporting visuals: behind the scenes, setups, mood boards, as relevant</span></label></li>
+          <li><label><input type="checkbox"><span>Figures numbered and referred to in the text</span></label></li>
+          <li><label><input type="checkbox"><span class="must">Statement of Authorship filled in and included</span></label></li>
+          <li><label><input type="checkbox"><span>References page, RMIT Harvard</span></label></li>
+          <li><label><input type="checkbox"><span>PDF uploaded to the A3 page on Canvas</span></label></li>
+        </ul>
+        <button class="reset" type="button" data-reset="a3">Clear ticks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILES ============ -->
+  <section id="files">
+    <h2>Files, naming and OneDrive</h2>
+    <p class="sub">File names tell us the order of your images, so they matter. Use lowercase, no spaces, and your own name and student number.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>What to upload on Canvas</h3>
+        <div class="ex"><span class="ok">A1</span>  A1_peterparker_s1234567.pdf
+    A1_peterparker_s1234567.zip
+    (or A1-1_... to A1-4_... .pdf + the zip)
+
+<span class="ok">A2</span>  A2_peterparker_s1234567.pdf
+    A2_peterparker_s1234567.zip
+
+<span class="ok">A3</span>  A3_peterparker_s1234567.pdf</div>
+      </div>
+      <div class="card">
+        <h3>JPG names inside the zip</h3>
+        <div class="ex"><span class="ok">A1</span>  journal-photo_name_studentnumber
+    1-1_peterparker_s1234567.jpg
+    1-2_peterparker_s1234567.jpg
+    ...
+    4-4_peterparker_s1234567.jpg
+
+<span class="ok">A2</span>  imagenumber_name_studentnumber
+    1_peterparker_s1234567.jpg
+    2_peterparker_s1234567.jpg
+    ...
+
+<span class="no">IMG_4021.jpg</span>   <span class="no">final final 2.jpg</span></div>
+      </div>
+      <div class="card">
+        <h3>Your OneDrive folder</h3>
+        <div class="ex">A1_peterparker_s1234567/
+  RAW/
+    journal1/   .CR3 .NEF .ARW ...
+    journal2/
+    journal3/
+    journal4/
+  behind-the-scenes/</div>
+        <ol>
+          <li>Upload the original RAW files, not edited exports.</li>
+          <li>Share the top folder: Share &gt; set the link so people in RMIT with the link can view &gt; Copy link.</li>
+          <li>Paste the link into your PDF and make it clickable.</li>
+          <li>Test it: open the link in a private browser window and sign in with a different RMIT account if you can.</li>
+        </ol>
+        <p>A2 uses the same layout: <code>A2_peterparker_s1234567/RAW/</code> and <code>behind-the-scenes/</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REFERENCES ============ -->
+  <section id="refs">
+    <h2>Referencing in RMIT Harvard</h2>
+    <p class="sub">Name the source in your text, then list it in full on the References page, A to Z by surname. For anything not shown here, use <a href="https://www.lib.rmit.edu.au/easy-cite/" target="_blank" rel="noopener">RMIT Easy Cite</a> and choose the Harvard style.</p>
+    <div class="refs">
+      <div class="ref"><b>Photobook</b><div>
+        <span class="lbl">In your text</span><div class="ex">Frank's road-trip sequencing (Frank 2008) showed me...</div>
+        <span class="lbl">References page</span><div class="ex">Frank, R 2008, <i>The Americans</i>, Steidl, Göttingen.</div>
+      </div></div>
+      <div class="ref"><b>Photograph online</b><div>
+        <span class="lbl">In your text</span><div class="ex">(Surname Year)</div>
+        <span class="lbl">References page</span><div class="ex">Surname, Initial Year, <i>Title of the photograph</i>, photograph, Name of website or gallery, accessed 14 November 2026, &lt;URL&gt;.</div>
+      </div></div>
+      <div class="ref"><b>Website or article</b><div>
+        <span class="lbl">In your text</span><div class="ex">(Author or Organisation Year)</div>
+        <span class="lbl">References page</span><div class="ex">Author or Organisation Year, <i>Title of the page</i>, Name of website, accessed 14 November 2026, &lt;URL&gt;.</div>
+      </div></div>
+      <div class="ref"><b>Video lecture or film</b><div>
+        <span class="lbl">In your text</span><div class="ex">(Creator Year)</div>
+        <span class="lbl">References page</span><div class="ex">Creator Year, <i>Title of the video</i>, video, Platform, accessed 14 November 2026, &lt;URL&gt;.</div>
+      </div></div>
+      <div class="ref"><b>Your own photos</b><div>
+        <span class="lbl">Caption</span><div class="ex">1.3  Steam and Hands, 2026 (photograph by the author)</div>
+        <span class="lbl">Note</span><div class="ex">Your own photos don't go on the References page. A caption is enough.</div>
+      </div></div>
+      <div class="ref"><b>AI on images (A1 Column 3 journal only)</b><div>
+        <span class="lbl">Caption</span><div class="ex">2.2  Title, 2026 · AI collaboration: [tool name], from my own photograph</div>
+        <span class="lbl">In your text</span><div class="ex">For photos 2.2 and 2.4 I used [tool name] to [what it did] (Company Year). My prompt was: "..."</div>
+        <span class="lbl">References page</span><div class="ex">Company Year, <i>Tool name</i>, generative AI tool, accessed 14 November 2026, &lt;URL&gt;.</div>
+      </div></div>
+      <div class="ref"><b>AI for text (any assignment)</b><div>
+        <span class="lbl">In your text</span><div class="ex">I used Claude to check the grammar of this entry (Anthropic 2026).</div>
+        <span class="lbl">References page</span><div class="ex">Anthropic 2026, <i>Claude</i>, large language model, accessed 14 November 2026, &lt;https://claude.ai&gt;.</div>
+        <span class="lbl">Also add, at the end of your text</span><div class="ex">AI use: Claude was used to check grammar. No AI was used to create, edit or change any image (or: AI was used on images only in my Column 3 journal, as described there).</div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="quiz">
+    <h2>Check yourself</h2>
+    <p class="sub">Quick questions on the rules students most often miss. Pick an answer to see if you are right and why. Nothing is sent or graded; it is just for you.</p>
+    <div class="qscore" aria-live="polite"><span class="num" id="qnum">0 answered</span><span class="track"><i id="qbar"></i></span><button class="reset" type="button" id="qreset">Start again</button><span class="msg" id="qmsg"></span></div>
+    <div class="qlist" id="qlist"></div>
+    <noscript><p class="sub">The quiz needs JavaScript turned on.</p></noscript>
+  </section>
+
+  <p class="foot">All due times are Vietnam time (ICT). The assignment briefs on Canvas are the official record: if anything here differs from Canvas, Canvas wins. Layouts on this page are a guide, not a fixed template; ask your lecturer if you want to try a different format.</p>
+</div>
+
+<footer class="site-foot">
+  <div class="school">School of Communication &amp; Design</div>
+  <div class="university">RMIT University Vietnam</div>
+  <div class="copyright">© 2026 Bin Youn · <a href="https://binyoun.com" target="_blank" rel="noopener">binyoun.com</a> · <a href="mailto:bin.youn@rmit.edu.vn">bin.youn@rmit.edu.vn</a></div>
+  <p class="disclaimer">An independent teaching resource made by Bin Youn for Creative Photography students. This is not an official RMIT University website. Canvas and the course guide are the official record: if anything here differs, Canvas is correct.</p>
+</footer>
+
+<script>
+// Checklist ticks are a per-viewer convenience; the page works without storage.
+(function () {
+  var KEY = "cp-assignment-guide-checks";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+  document.querySelectorAll(".check").forEach(function (list) {
+    var k = list.dataset.key;
+    var boxes = list.querySelectorAll("input");
+    boxes.forEach(function (b, i) {
+      b.checked = !!(saved[k] && saved[k][i]);
+      b.addEventListener("change", function () {
+        saved[k] = Array.prototype.map.call(boxes, function (x) { return x.checked; });
+        save();
+      });
+    });
+  });
+  document.querySelectorAll("[data-reset]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var k = btn.dataset.reset;
+      document.querySelectorAll('.check[data-key="' + k + '"] input').forEach(function (b) { b.checked = false; });
+      delete saved[k]; save();
+    });
+  });
+})();
+// A1 technique board and journal planner. The plan lives in this browser only.
+(function () {
+  var COLS = [
+    { n: 1, name: "Conceptual & Portrait Approaches", t: [
+      ["Staged / Conceptual Self-Portrait", "Self-portraits planned and directed to communicate ideas, identity or narrative, rather than documentation."]] },
+    { n: 2, name: "Tonal & Alternative Image-Making", t: [
+      ["Black and White", "Removing colour to focus on light, contrast, texture, mood and form."],
+      ["Alternative Photography", "Non-traditional processes that go beyond standard digital or film methods."],
+      ["Alternative Photography: Cyanotype, etc.", "Historical or experimental printing processes that emphasise materiality and process."]] },
+    { n: 3, name: "Camera & Optical Disruption", ai: true, t: [
+      ["Physical Lens Glitch", "Physical interference (scratches, filters, materials) that distorts the camera's optics on purpose."],
+      ["Digital Lens Glitch", "Manipulating the digital capture or files to create distortion, errors or unexpected results."]] },
+    { n: 4, name: "Light-Based Techniques", t: [
+      ["Light Painting", "A moving light source during a long exposure, used to draw with light."],
+      ["Still Life with Light Painting", "Light painting applied to objects or arranged scenes."],
+      ["Lighting-Related", "Experiments with lighting setup, direction, intensity, colour and shadow."]] },
+    { n: 5, name: "Time, Layering & Combination", t: [
+      ["Multiple Exposure / Double Exposure", "Two or more exposures combined in one image to suggest layering, memory or symbolic meaning."],
+      ["Joiner", "One image built from many photographs aligned together, to show time, movement or a fragmented view."],
+      ["Diptych / Triptych", "Two or three images presented together for comparison, contrast or narrative."],
+      ["Sequence", "A series of images arranged to suggest progression or storytelling."]] },
+    { n: 6, name: "Mixed Media & Narrative Structures", t: [
+      ["Mixed Media: Collage", "Photographs combined with other materials or images in a flat composition."],
+      ["Mixed Media: Assemblage", "Photographic elements in three-dimensional or sculptural arrangements."]] }
+  ];
+  var tc = document.getElementById("tcols"), jg = document.getElementById("jgrid");
+  if (!tc || !jg) return;
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function find(v) { if (!v) return null; var p = v.split("-"); var c = COLS[+p[0] - 1]; return c ? { col: c, name: c.t[+p[1]][0] } : null; }
+
+  // technique board
+  COLS.forEach(function (c) {
+    var box = el("div", "tcol"); box.id = "tcol-" + c.n;
+    var hd = el("div", "hd"); hd.appendChild(el("span", "cn", "Column " + c.n)); hd.appendChild(el("h4", null, c.name)); hd.appendChild(el("span", "usedby", ""));
+    box.appendChild(hd);
+    var ul = el("ul");
+    c.t.forEach(function (t) { var li = el("li"); li.appendChild(el("b", null, t[0])); li.appendChild(el("span", null, t[1])); ul.appendChild(li); });
+    box.appendChild(ul);
+    if (c.ai) box.appendChild(el("div", "ai", "The Week 3 Beyond the Lens approach. AI collaboration on images is accepted in this column only, declared and referenced."));
+    tc.appendChild(box);
+  });
+
+  // planner
+  var KEY = "cp-a1-plan";
+  var Qs = [
+    ["subject", "What will you photograph?", "text", "A person, place, object or ritual linked to your idea"],
+    ["why", "Why does this technique suit this part of your idea?", "area", "What does the technique say that a straight photo can't?"]
+  ];
+  var cards = [];
+  for (var i = 0; i < 4; i++) {
+    var card = el("div", "jcard");
+    var h = el("h4", null, "Journal " + (i + 1)); var colTag = el("span", "col", ""); h.appendChild(colTag); card.appendChild(h);
+    var f1 = el("div", "f"); var l1 = el("label", null, "Main technique"); var sel = document.createElement("select"); sel.id = "j" + i + "-tech"; l1.htmlFor = sel.id;
+    sel.appendChild(new Option("Choose a technique...", ""));
+    COLS.forEach(function (c) { var g = document.createElement("optgroup"); g.label = "Column " + c.n + " · " + c.name; c.t.forEach(function (t, k) { g.appendChild(new Option(t[0], c.n + "-" + k)); }); sel.appendChild(g); });
+    f1.appendChild(l1); f1.appendChild(sel); card.appendChild(f1);
+    var f2 = el("div", "f"); var l2 = el("label", null, "Combine with (optional)"); var sel2 = document.createElement("select"); sel2.id = "j" + i + "-mix"; l2.htmlFor = sel2.id;
+    sel2.appendChild(new Option("No second technique", ""));
+    COLS.forEach(function (c) { var g = document.createElement("optgroup"); g.label = "Column " + c.n; c.t.forEach(function (t, k) { g.appendChild(new Option(t[0], c.n + "-" + k)); }); sel2.appendChild(g); });
+    f2.appendChild(l2); f2.appendChild(sel2); card.appendChild(f2);
+    var inputs = { tech: sel, mix: sel2 };
+    Qs.forEach(function (q) {
+      var f = el("div", "f"); var l = el("label", null, q[1]); var inp = q[2] === "area" ? document.createElement("textarea") : document.createElement("input");
+      if (q[2] === "area") inp.rows = 2; else inp.type = "text";
+      inp.id = "j" + i + "-" + q[0]; l.htmlFor = inp.id; inp.placeholder = q[3];
+      f.appendChild(l); f.appendChild(inp); card.appendChild(f); inputs[q[0]] = inp;
+    });
+    var ai = el("p", "hint", "Column 3: if you use AI on any photo here, declare the tool, the photos and what it did, and reference it."); ai.hidden = true; card.appendChild(ai);
+    inputs.card = card; inputs.colTag = colTag; inputs.ai = ai;
+    jg.appendChild(card); cards.push(inputs);
+  }
+  var idea = document.getElementById("p-idea"), chk = document.getElementById("pcheck"), note = document.getElementById("p-note");
+
+  function state() {
+    return { idea: idea.value, j: cards.map(function (c) { return { tech: c.tech.value, mix: c.mix.value, subject: c.subject.value, why: c.why.value }; }) };
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state())); } catch (e) {} }
+  function load(st) {
+    idea.value = st.idea || "";
+    (st.j || []).forEach(function (j, i) { if (!cards[i]) return; cards[i].tech.value = j.tech || ""; cards[i].mix.value = j.mix || ""; cards[i].subject.value = j.subject || ""; cards[i].why.value = j.why || ""; });
+  }
+  function refresh() {
+    var used = {}; // column -> journal index
+    cards.forEach(function (c, i) { var f = find(c.tech.value); if (f && used[f.col.n] == null) used[f.col.n] = i; });
+    cards.forEach(function (c, i) {
+      Array.prototype.forEach.call(c.tech.options, function (o) {
+        if (!o.value) return;
+        var cn = +o.value.split("-")[0]; var by = used[cn];
+        o.disabled = by != null && by !== i;
+      });
+      var f = find(c.tech.value);
+      c.colTag.textContent = f ? "Column " + f.col.n : "";
+      c.ai.hidden = !(f && f.col.ai);
+      c.card.classList.toggle("ok", !!(f && c.subject.value.trim() && c.why.value.trim()));
+    });
+    COLS.forEach(function (c) {
+      var box = document.getElementById("tcol-" + c.n); var by = used[c.n];
+      box.classList.toggle("used", by != null);
+      box.querySelector(".usedby").textContent = by != null ? "Journal " + (by + 1) : "";
+    });
+    // checks
+    var picked = cards.filter(function (c) { return find(c.tech.value); }).length;
+    var cols = Object.keys(used).length;
+    var rows = [
+      [idea.value.trim().length > 0, "You have a rễ-root idea"],
+      [picked === 4, picked + " of 4 journals have a main technique"],
+      [cols === 4 && picked === 4, cols + " different columns used (you need 4)"],
+      [cards.every(function (c) { return c.subject.value.trim(); }), "Every journal has a subject"],
+      [cards.every(function (c) { return c.why.value.trim(); }), "Every journal says why the technique fits"]
+    ];
+    chk.innerHTML = "";
+    rows.forEach(function (r) { var d = el("div", "row"); d.appendChild(el("span", r[0] ? "y" : "n", r[0] ? "✓" : "○")); d.appendChild(el("span", null, r[1])); chk.appendChild(d); });
+    if (rows.every(function (r) { return r[0]; })) chk.appendChild(el("div", "y", "Your plan is complete. Copy it and bring it to your consultation."));
+  }
+  function text() {
+    var lines = ["A1 Visual Journals plan", "rễ-root idea: " + (idea.value.trim() || "-"), ""];
+    cards.forEach(function (c, i) {
+      var f = find(c.tech.value), m = find(c.mix.value);
+      lines.push("Journal " + (i + 1) + ": " + (f ? f.name + " (Column " + f.col.n + ")" : "-") + (m ? " + " + m.name : ""));
+      lines.push("  Subject: " + (c.subject.value.trim() || "-"));
+      lines.push("  Why: " + (c.why.value.trim() || "-"));
+    });
+    return lines.join("\n");
+  }
+  function onChange() { refresh(); save(); note.textContent = ""; }
+  idea.addEventListener("input", onChange);
+  cards.forEach(function (c) { ["tech", "mix", "subject", "why"].forEach(function (k) { c[k].addEventListener(k === "tech" || k === "mix" ? "change" : "input", onChange); }); });
+
+  document.getElementById("p-copy").addEventListener("click", function () {
+    var t = text();
+    function done(ok) { note.textContent = ok ? "Copied. Paste it into a note, email or the Miro board." : "Couldn't copy automatically. Select the text in your browser and copy it."; }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { done(true); }, function () { done(false); });
+    else done(false);
+  });
+  document.getElementById("p-demo").addEventListener("click", function () {
+    var has = idea.value.trim() || cards.some(function (c) { return c.tech.value || c.subject.value.trim() || c.why.value.trim(); });
+    if (has && !window.confirmDemo) { window.confirmDemo = true; note.textContent = "This will replace your plan. Press Show an example again to continue."; return; }
+    window.confirmDemo = false;
+    load({ idea: "Example (a made-up student): my grandmother's kitchen, and the recipes, hands and objects that connect me to my family's past.", j: [
+      { tech: "2-0", mix: "", subject: "My grandmother's hands while she cooks", why: "Without colour, the texture of her skin and the steam become the focus, like an old family photograph." },
+      { tech: "3-0", mix: "", subject: "The kitchen seen through an oil-smeared, cracked filter", why: "The distortion feels like a memory that is fading and hard to hold on to." },
+      { tech: "5-0", mix: "", subject: "My face layered over the old house", why: "Layering puts me and the place in one frame: my present on top of my roots." },
+      { tech: "6-0", mix: "2-2", subject: "My prints cut together with her handwritten recipes", why: "Real paper and handwriting bring her voice into the image; cyanotype prints make it feel aged." }
+    ] });
+    onChange(); note.textContent = "Example loaded. Change it, or press Clear to start your own.";
+  });
+  document.getElementById("p-clear").addEventListener("click", function () { load({ idea: "", j: [{}, {}, {}, {}] }); window.confirmDemo = false; onChange(); });
+
+  try { var saved = JSON.parse(localStorage.getItem(KEY) || "null"); if (saved) load(saved); } catch (e) {}
+  refresh();
+})();
+
+// Self-check quiz: answers are checked in the page, nothing is stored or sent.
+(function () {
+  var Q = [
+    { q: "What is the theme that runs through all 4 A1 journals?",
+      o: ["Anything you like, a new theme per journal", "rễ-root: connecting your personal identity to a visual story", "Street photography in Saigon", "The history of photography"], a: 1,
+      w: "All four journals explore one rễ-root idea about you: where you come from, what you carry, who you are becoming.", s: "#a1" },
+    { q: "How many photos does A1 need in total?",
+      o: ["4: one per journal", "16: 4 journals, 4 final photos each", "As many as you like", "10 to 30"], a: 1,
+      w: "4 journals with 4 final photos each, so 16 in total.", s: "#a1" },
+    { q: "Which set of techniques for your 4 journals follows the rule?",
+      o: ["Light Painting, Still Life with Light Painting, Lighting-Related, Black and White", "Black and White, Physical Lens Glitch, Double Exposure, Collage", "Joiner, Sequence, Diptych, Double Exposure", "Black and White four times, with different subjects"], a: 1,
+      w: "Each journal must use a technique from a different column. Black and White (Column 2), Physical Lens Glitch (Column 3), Double Exposure (Column 5) and Collage (Column 6) are four different columns.", s: "#techniques" },
+    { q: "Can you combine two techniques inside one journal?",
+      o: ["No, one technique only", "Yes, as long as each journal's main technique comes from a different column", "Only in Journal 4", "Only with your lecturer's written approval"], a: 1,
+      w: "Combining is fine. The rule is only that your 4 journals come from 4 different columns.", s: "#techniques" },
+    { q: "You make one double exposure from 3 frames. How many of your 4 photos does it count as?",
+      o: ["3", "1", "0, composites don't count", "It depends on the file size"], a: 1,
+      w: "A composite counts as one final photo, however many frames or layers go into it. You still need 4 final photos per journal.", s: "#a1" },
+    { q: "What is the order of pages inside each journal?",
+      o: ["Reflection, then photos", "Overview, 4 photos, reflection, mood board, behind the scenes", "Behind the scenes, then one photo", "Mood board only"], a: 1,
+      w: "Every journal follows the same flow, as on the Miro board.", s: "#a1" },
+    { q: "What should the reflection focus on?",
+      o: ["What happened in class that week", "How and why you chose the technique(s) and the subject", "Your camera's specifications", "A summary of the lecture slides"], a: 1,
+      w: "Write about how and why you chose the technique(s) and subject matter, 250 to 500 words per journal, beside each photo or after all 4.", s: "#a1" },
+    { q: "When can you use AI on your images?",
+      o: ["Never, in any assignment", "Anywhere, as long as you mention it", "Only in an A1 journal using a Column 3 technique (Beyond the Lens), declared and referenced", "Only for your A2 final project"], a: 2,
+      w: "AI collaboration on images is accepted only in a Column 3 journal, and you must say which tool, on which photos and what it did. Everywhere else, AI is for planning or grammar only.", s: "#basics" },
+    { q: "Your A1 PDF has great photos and writing, but no behind-the-scenes photos. What happens?",
+      o: ["You lose a few marks", "It is not marked", "Nothing, behind the scenes is optional", "You get an automatic extension"], a: 1,
+      w: "Behind-the-scenes photos showing your face, the OneDrive RAW link and the Statement of Authorship are required. Without them the submission is incomplete and will not be marked.", s: "#a1" },
+    { q: "Your A1 PDF is too big to upload. What do you do?",
+      o: ["Upload a Canva link instead", "Upload 4 PDFs (A1-1 to A1-4), each with its own cover, OneDrive link and Statement of Authorship", "Upload only the first two journals", "Email the PDF to your lecturer"], a: 1,
+      w: "One PDF is preferred, but 4 PDFs, one per journal, are accepted. Each file must be complete on its own.", s: "#a1" },
+    { q: "In your A1 zip, what is the correct name for the 3rd photo in Journal 2?",
+      o: ["IMG_4021.jpg", "journal 2 photo 3.jpg", "2-3_peterparker_s1234567.jpg", "3_peterparker_s1234567.jpg"], a: 2,
+      w: "A1 uses journal-photo_name_studentnumber, all lowercase with no spaces.", s: "#files" },
+    { q: "What goes in your OneDrive folder for A1 and A2?",
+      o: ["Your edited JPGs only", "Your original RAW files and your behind-the-scenes photos, shared so people at RMIT with the link can open it", "A copy of your PDF", "Your Lightroom catalogue"], a: 1,
+      w: "Upload the original RAW files (not edited exports) and the behind-the-scenes photos, then test the link before you submit.", s: "#files" },
+    { q: "What page format should your PDFs use?",
+      o: ["A4 portrait", "Any size, mixed is fine", "Landscape 16:9, the same size on every page", "Square"], a: 2,
+      w: "Set up landscape 16:9 pages before you start, for example 1920 x 1080 px.", s: "#basics" },
+    { q: "In A2, what does the Presentation and communication mark look at?",
+      o: ["Your font choice", "The order and arrangement of your images", "How many images you include", "Your Week 12 speech"], a: 1,
+      w: "It is about sequence and arrangement, so your PDF order, JPG numbers and showcase order should be the same sequence.", s: "#a2" },
+    { q: "How long is the A3 documentation?",
+      o: ["250 to 500 words", "500 words exactly", "750 to 1000 words", "No word limit"], a: 2,
+      w: "750 to 1000 words on your workflow, challenges, how you solved them and an evaluation, with supporting visuals.", s: "#a3" },
+    { q: "Which is a correct RMIT Harvard reference for a photobook?",
+      o: ["The Americans by Robert Frank", "Frank, R 2008, The Americans, Steidl, Göttingen.", "www.steidl.de/the-americans", "Robert Frank (photographer), very inspiring"], a: 1,
+      w: "Surname, initial, year, title in italics, publisher, place. Your own photos don't go on the References page; a caption is enough.", s: "#refs" }
+  ];
+  var list = document.getElementById("qlist");
+  if (!list) return;
+  var answered = 0, right = 0;
+  function update() {
+    document.getElementById("qnum").textContent = answered + " / " + Q.length + " answered · " + right + " right";
+    document.getElementById("qbar").style.width = (answered / Q.length * 100) + "%";
+    var m = "";
+    if (answered === Q.length) {
+      m = right === Q.length ? "All " + Q.length + " right. You are ready to plan and lay out your work."
+        : right >= Q.length - 3 ? right + " of " + Q.length + " right. Reread the sections linked under the ones you missed."
+        : right + " of " + Q.length + " right. Read the guide again from the top, then press Start again.";
+    }
+    document.getElementById("qmsg").textContent = m;
+  }
+  function render() {
+    answered = 0; right = 0; list.innerHTML = "";
+    Q.forEach(function (item, i) {
+      var fs = document.createElement("fieldset"); fs.className = "q";
+      var lg = document.createElement("legend"); lg.textContent = item.q; fs.appendChild(lg);
+      var opts = document.createElement("div"); opts.className = "opts";
+      var why = document.createElement("p"); why.className = "why"; why.hidden = true;
+      // Shuffle the options so the right answer is not always in the same place.
+      var order = item.o.map(function (_, k) { return k; });
+      for (var k = order.length - 1; k > 0; k--) { var r = Math.floor(Math.random() * (k + 1)); var t = order[k]; order[k] = order[r]; order[r] = t; }
+      order.forEach(function (j) {
+        var text = item.o[j];
+        var lab = document.createElement("label");
+        var inp = document.createElement("input"); inp.type = "radio"; inp.name = "q" + i; inp.value = j;
+        var sp = document.createElement("span"); sp.textContent = text;
+        lab.appendChild(inp); lab.appendChild(sp); opts.appendChild(lab);
+        inp.addEventListener("change", function () {
+          if (fs.classList.contains("done")) return;
+          fs.classList.add("done"); answered++;
+          var ok = j === item.a; if (ok) right++;
+          opts.querySelectorAll("input").forEach(function (x) { x.disabled = true; });
+          opts.children[order.indexOf(item.a)].classList.add("right");
+          if (!ok) lab.classList.add("wrong");
+          why.className = "why" + (ok ? "" : " bad");
+          why.innerHTML = "<b>" + (ok ? "Right" : "Not quite") + "</b>";
+          why.appendChild(document.createTextNode(item.w + " "));
+          var a = document.createElement("a"); a.href = item.s; a.textContent = "Read this part of the guide";
+          why.appendChild(a); why.hidden = false;
+          update();
+        });
+      });
+      fs.appendChild(opts); fs.appendChild(why); list.appendChild(fs);
+    });
+    update();
+  }
+  document.getElementById("qreset").addEventListener("click", render);
+  render();
+})();
+</script>
+</body>
+</html>

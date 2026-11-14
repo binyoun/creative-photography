@@ -259,7 +259,7 @@ code { background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; ove
       <div class="tip"><b>Caption every photo</b><span>A short line under each photo: number, title and year. The number matches your file name. No camera settings needed. See the caption examples below.</span></div>
       <div class="tip"><b>Page numbers and proofreading</b><span>Number your pages. The briefs ask for writing free of grammar and spelling errors, so read it aloud once before you export.</span></div>
       <div class="tip"><b>Your own photos, this semester</b><span>Every photo is taken by you this semester for this course. Reference any photographer or artist who inspired you.</span></div>
-      <div class="tip"><b>AI on images: Beyond the Lens only</b><span>AI collaboration on images is accepted only in an A1 journal using a Week 3 technique (Beyond the Lens: Camera &amp; Optical Disruption), declared and referenced. Everywhere else, use AI only to plan or check grammar, never to generate, edit or alter images.</span></div>
+      <div class="tip"><b>AI on images: Beyond the Lens only</b><span>AI collaboration on images is accepted only in an A1 journal using a Week 3 technique (Beyond the Lens), declared and referenced. Everywhere else, use AI only to plan or check grammar, never to generate, edit or alter images.</span></div>
     </div>
     <div class="cols">
       <div class="card">
@@ -813,13 +813,13 @@ A1-4_peterparker_s1234567.pdf</div>
   var COLS = [
     { n: 1, name: "Conceptual & Portrait Approaches", t: [
       ["Staged / Conceptual Self-Portrait", "Self-portraits planned and directed to communicate ideas, identity or narrative, rather than documentation."]] },
-    { n: 2, name: "Tonal & Alternative Image-Making", t: [
-      ["Black and White", "Removing colour to focus on light, contrast, texture, mood and form."],
+    { n: 2, name: "Tonal Image-Making", t: [
+      ["Black and White", "Removing colour to focus on light, contrast, texture, mood and form."]] },
+    { n: 3, name: "Camera & Optical Disruption + Alternative Photography", ai: true, t: [
+      ["Physical Lens Glitch", "Physical interference (scratches, filters, materials) that distorts the camera's optics on purpose."],
+      ["Digital Lens Glitch", "Manipulating the digital capture or files to create distortion, errors or unexpected results."],
       ["Alternative Photography", "Non-traditional processes that go beyond standard digital or film methods."],
       ["Alternative Photography: Cyanotype, etc.", "Historical or experimental printing processes that emphasise materiality and process."]] },
-    { n: 3, name: "Camera & Optical Disruption", ai: true, t: [
-      ["Physical Lens Glitch", "Physical interference (scratches, filters, materials) that distorts the camera's optics on purpose."],
-      ["Digital Lens Glitch", "Manipulating the digital capture or files to create distortion, errors or unexpected results."]] },
     { n: 4, name: "Light-Based Techniques", t: [
       ["Light Painting", "A moving light source during a long exposure, used to draw with light."],
       ["Still Life with Light Painting", "Light painting applied to objects or arranged scenes."],
@@ -950,7 +950,7 @@ A1-4_peterparker_s1234567.pdf</div>
       { tech: "2-0", mix: "", subject: "My grandmother's hands while she cooks", why: "Without colour, the texture of her skin and the steam become the focus, like an old family photograph." },
       { tech: "3-0", mix: "", subject: "The kitchen seen through an oil-smeared, cracked filter", why: "The distortion feels like a memory that is fading and hard to hold on to." },
       { tech: "5-0", mix: "", subject: "My face layered over the old house", why: "Layering puts me and the place in one frame: my present on top of my roots." },
-      { tech: "6-0", mix: "2-2", subject: "My prints cut together with her handwritten recipes", why: "Real paper and handwriting bring her voice into the image; cyanotype prints make it feel aged." }
+      { tech: "6-0", mix: "3-3", subject: "My prints cut together with her handwritten recipes", why: "Real paper and handwriting bring her voice into the image; cyanotype prints make it feel aged." }
     ] });
     onChange(); note.textContent = "Example loaded. Change it, or press Clear to start your own.";
   });
